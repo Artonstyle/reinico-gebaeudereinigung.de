@@ -1,4 +1,4 @@
-/* 1. GRUNDLAGEN & FARBEN */
+/* 1. ALLGEMEINE EINSTELLUNGEN */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
@@ -18,13 +18,14 @@ html, body {
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
     color: var(--text);
+    line-height: 1.6;
 }
 
 body {
     padding-top: 80px; /* Platz für den fixierten Header */
 }
 
-/* 2. HEADER & NAVIGATION */
+/* 2. HEADER & NAVIGATION (DESKTOP) */
 header {
     position: fixed;
     top: 0;
@@ -41,12 +42,28 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    /* RECHTSBÜNDIG FÜR PC */
-    justify-content: flex-end; 
+    /* Dies sorgt für: Name LINKS, Menü RECHTS */
+    justify-content: space-between; 
     align-items: center;
     padding: 0 20px;
 }
 
+/* FIRMENNAME LINKS */
+.logo {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.25rem;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--secondary);
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+/* MENÜ RECHTS */
 .nav-links {
     display: flex;
     list-style: none;
@@ -54,7 +71,7 @@ header {
 }
 
 .has-dropdown {
-    position: relative;
+    position: relative; /* Wichtig für die Dropdown-Position */
 }
 
 .nav-links a {
@@ -64,7 +81,7 @@ header {
     font-size: 0.95rem;
     padding: 10px 0;
     display: block;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
@@ -75,11 +92,11 @@ header {
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0; /* Richtet das Dropdown rechtsbündig am Link aus */
+    right: 0; /* Richtet das Dropdown bündig rechts am Link aus */
     background: var(--white);
     display: none;
     list-style: none;
-    min-width: 230px;
+    min-width: 240px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
     border-radius: 0 0 5px 5px;
     padding: 10px 0;
@@ -102,7 +119,12 @@ header {
     border-bottom: none;
 }
 
-/* 4. SEKTIONEN & CONTENT */
+.dropdown li a:hover {
+    background-color: #f8f9fa;
+    color: var(--primary);
+}
+
+/* 4. CONTENT SEKTIONEN (Winterdienst/Startseite) */
 .section-padding {
     padding: 60px 5%;
     max-width: 1200px;
@@ -119,21 +141,33 @@ header {
     font-weight: bold;
     margin-top: 20px;
     border: none;
+    transition: background 0.3s;
+    cursor: pointer;
 }
 
-/* 5. FOOTER */
+.btn-primary:hover {
+    background: #004494;
+}
+
+/* 5. FOOTER (2026) */
 footer {
     background: var(--secondary);
     color: white;
     text-align: center;
     padding: 40px 20px;
     width: 100%;
+    margin-top: 40px;
 }
 
-/* 6. MOBILE OPTIMIERUNG */
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+/* 6. MOBILE OPTIMIERUNG (SMARTPHONE) */
 @media (max-width: 768px) {
     body {
-        padding-top: 140px;
+        padding-top: 130px; /* Platz für den größeren Header-Bereich */
     }
 
     header {
@@ -142,14 +176,16 @@ footer {
     }
 
     .header-container {
-        justify-content: center; /* Zentriert auf dem Handy für bessere Bedienung */
+        flex-direction: column; /* Name oben, Menü darunter */
+        gap: 12px;
+        justify-content: center;
     }
 
     .nav-links {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        gap: 8px;
+        gap: 5px;
     }
 
     .nav-links li {
@@ -157,17 +193,19 @@ footer {
     }
 
     .nav-links a {
-        background: #f8f9fa;
+        background: #f8f9fa; /* Grauer Balken für bessere Klickbarkeit am Handy */
         text-align: center;
-        border-radius: 4px;
-        padding: 10px;
+        padding: 12px;
+        border-radius: 5px;
+        font-size: 1rem;
     }
 
     .dropdown {
-        position: static;
+        position: static; /* Dropdown klappt das Menü nach unten auf */
         width: 100%;
         box-shadow: none;
         display: none;
+        background: #f1f1f1;
     }
 
     .has-dropdown:hover .dropdown {
