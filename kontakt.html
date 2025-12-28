@@ -2,27 +2,65 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Kontakt | Reinico</title>
+    <title>Kontakt | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
 <header>
     <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
     <ul class="nav-links">
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="dienstleistungen.html">Unsere Dienstleistungen</a></li>
+        <li>
+            <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                <li><a href="winterdienst.html">Winterdienst</a></li>
+                <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                <li><a href="entruempelung.html">Entrümpelung</a></li>
+            </ul>
+        </li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="jobs.html">Jobs</a></li>
     </ul>
 </header>
-<section class="section-padding" style="max-width: 600px; margin: 0 auto;">
-    <h2 style="text-align: center; margin-bottom: 20px;">Kontaktieren Sie uns</h2>
-    <form>
-        <input type="text" placeholder="Name" style="width:100%; padding:15px; margin-bottom:10px; border:1px solid #ddd;">
-        <input type="email" placeholder="E-Mail" style="width:100%; padding:15px; margin-bottom:10px; border:1px solid #ddd;">
-        <textarea placeholder="Ihre Nachricht" style="width:100%; padding:15px; margin-bottom:10px; border:1px solid #ddd; height:150px;"></textarea>
-        <button class="btn-primary" style="width:100%;">Absenden</button>
-    </form>
-</section>
+
+<main class="section-padding">
+    <div style="display: flex; gap: 50px; flex-wrap: wrap;">
+        <div style="flex: 1; min-width: 300px;">
+            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;">Kontaktieren Sie uns</h1>
+            <p style="font-size: 1.1rem; margin-bottom: 30px;">Haben Sie Fragen zu unseren Leistungen oder wünschen Sie ein individuelles Angebot? Wir sind gerne für Sie da!</p>
+            
+            <div style="margin-bottom: 20px;">
+                <p><strong><i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> Adresse:</strong><br>Musterstraße 123, 12345 Musterstadt</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p><strong><i class="fas fa-phone" style="color: var(--primary);"></i> Telefon:</strong><br>+49 (0) 123 456 789</p>
+            </div>
+            <div style="margin-bottom: 20px;">
+                <p><strong><i class="fas fa-envelope" style="color: var(--primary);"></i> E-Mail:</strong><br>info@reinico.de</p>
+            </div>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; background: #f4f7fa; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+            <h3>Nachricht schreiben</h3>
+            <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
+                <input type="text" placeholder="Ihr Name" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
+                <input type="email" placeholder="Ihre E-Mail" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
+                <input type="text" placeholder="Betreff" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
+                <textarea placeholder="Ihre Nachricht an uns..." style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px; height:150px;"></textarea>
+                <button class="btn-primary" style="width:100%;">NACHRICHT ABSENDEN</button>
+            </form>
+        </div>
+    </div>
+</main>
+
+<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
 </body>
 </html>
