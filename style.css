@@ -1,30 +1,21 @@
-/* 1. GRUNDLAGEN & FARBEN */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
     --white: #ffffff;
-    --light-bg: #f4f7fa;
     --text: #333333;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
     width: 100%;
-    overflow-x: hidden; /* Verhindert seitliches Scrollen auf Mobile */
+    overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    color: var(--text);
 }
 
-body {
-    padding-top: 80px; /* Platzhalter für den fixierten Header */
-}
+body { padding-top: 80px; }
 
-/* 2. HEADER & NAVIGATION */
+/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -41,7 +32,7 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    justify-content: space-between; /* Logo links, Menü rechts */
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
@@ -54,26 +45,17 @@ header {
     font-weight: bold;
 }
 
-.logo img {
-    height: 50px;
-    width: auto;
-}
+.logo img { height: 45px; width: auto; }
+.logo span { margin-left: 10px; font-size: 1.1rem; }
 
-.logo span {
-    margin-left: 10px;
-    font-size: 1.1rem;
-}
-
-/* NAV LINKS */
+/* NAVIGATION */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
 }
 
-.has-dropdown {
-    position: relative; /* WICHTIG: Damit das Dropdown direkt hier drunter erscheint */
-}
+.nav-links li { position: relative; }
 
 .nav-links a {
     text-decoration: none;
@@ -82,150 +64,104 @@ header {
     font-size: 0.95rem;
     padding: 10px 0;
     display: block;
-    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-/* 3. DROPDOWN MENÜ (FIXED POSITION) */
+/* DROPDOWN - Desktop */
 .dropdown {
     position: absolute;
-    top: 100%; /* Erscheint exakt unter dem Nav-Punkt */
-    left: 0;   /* Richtet sich links am Nav-Punkt aus */
+    top: 100%;
+    left: 0;
     background: var(--white);
     display: none;
     list-style: none;
-    min-width: 230px;
+    min-width: 220px;
     box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-radius: 0 0 5px 5px;
     padding: 10px 0;
     z-index: 10000;
 }
 
-.has-dropdown:hover .dropdown {
-    display: block;
-}
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown li a { padding: 10px 20px; font-weight: normal; border-bottom: 1px solid #eee; }
 
-.dropdown li a {
-    padding: 10px 20px;
-    font-weight: normal;
-    font-size: 0.9rem;
-    border-bottom: 1px solid #f1f1f1;
-}
-
-.dropdown li:last-child a {
-    border-bottom: none;
-}
-
-.dropdown li a:hover {
-    background-color: #f8f9fa;
-    color: var(--primary);
-}
-
-/* 4. HERO & CONTENT SECTIONS */
+/* HERO SEKTION */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/hero-bg.jpg') center/cover;
-    min-height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('image/hero-bg.jpg') center/cover;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: var(--white);
-    padding: 40px 20px;
-    width: 100%;
+    color: white;
+    padding: 20px;
 }
 
-.section-padding {
-    padding: 60px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* EXPERTISE GRID */
-.expertise-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
+/* EXPERTISE CARDS */
+.section-padding { padding: 60px 5%; }
+.expertise-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .expertise-card {
-    background: var(--white);
+    background: white;
     border: 1px solid #eee;
     padding: 30px;
-    border-radius: 12px;
+    border-radius: 10px;
     flex: 1;
     min-width: 280px;
     max-width: 350px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
+.expertise-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
 
-.expertise-card i {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-}
-
+/* BUTTON */
 .btn-primary {
     background: var(--primary);
     color: white;
-    padding: 14px 28px;
+    padding: 12px 24px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
     font-weight: bold;
+    display: inline-block;
     margin-top: 20px;
 }
 
-/* 5. FOOTER */
-footer {
-    background: var(--secondary);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    width: 100%;
-}
-
-/* 6. MOBILE OPTIMIERUNG (HANDY FIX) */
+/* MOBILE OPTIMIERUNG - Das löst das Problem in deinen Bildern */
 @media (max-width: 768px) {
-    body {
-        padding-top: 130px; /* Mehr Platz für den gestapelten Header */
-    }
+    body { padding-top: 140px; } /* Platz für gestapeltes Menü */
 
-    header {
-        height: auto;
-        position: fixed;
-    }
+    header { height: auto; padding: 10px 0; }
 
     .header-container {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .nav-links {
-        margin-top: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column; /* Logo oben, Menü darunter */
         gap: 10px;
     }
 
-    .nav-links a {
-        font-size: 0.85rem;
-        padding: 5px 8px;
+    .nav-links {
+        flex-direction: column; /* Menüpunkte untereinander */
+        align-items: center;
+        width: 100%;
+        gap: 5px;
     }
 
+    .nav-links li { width: 100%; text-align: center; }
+
+    .nav-links a {
+        padding: 8px;
+        background: #f8f9fa;
+        border-radius: 5px;
+        font-size: 0.9rem;
+    }
+
+    /* Dropdown auf Mobile */
     .dropdown {
-        position: static; /* Dropdown klappt unter dem Punkt auf Mobile aus */
+        position: static; /* Drückt den restlichen Inhalt nach unten statt zu schweben */
         width: 100%;
         box-shadow: none;
-        background: #fdfdfd;
-        display: none;
+        background: #f1f1f1;
+        display: none; /* Erst beim Hover/Klick zeigen */
     }
 
     .has-dropdown:hover .dropdown {
         display: block;
     }
 }
+
+footer { background: var(--secondary); color: white; text-align: center; padding: 30px; }
