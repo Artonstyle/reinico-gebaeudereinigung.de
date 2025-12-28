@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Dienstleistungen | Reinico Gebäudereinigung</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        .service-section { padding: 60px 10%; border-bottom: 1px solid #eee; display: flex; gap: 40px; align-items: center; }
+        .service-section:nth-child(even) { flex-direction: row-reverse; background: #fdfdfd; }
+        .service-text { flex: 1; }
+        .service-image { flex: 1; height: 350px; border-radius: 15px; overflow: hidden; }
+        .service-image img { width: 100%; height: 100%; object-fit: cover; }
+        .service-text h2 { color: var(--primary); margin-bottom: 15px; font-size: 2rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+        <li>
+            <a href="dienstleistungen.html">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="dienstleistungen.html#fenster">Fensterreinigung</a></li>
+                <li><a href="dienstleistungen.html#buero">Büroreinigung</a></li>
+                <li><a href="dienstleistungen.html#entruempelung">Entrümpelung</a></li>
+            </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+    </ul>
+</header>
+
+<div id="fenster" class="service-section">
+    <div class="service-text">
+        <h2>Fensterreinigung</h2>
+        <p>Wir sorgen für streifenfreien Glanz bei Ihren Glasflächen, Rahmen und Schaufenstern. Egal ob Privat oder Gewerbe.</p>
+    </div>
+    <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Fensterreinigung">
+    </div>
+</div>
+
+<div id="entruempelung" class="service-section">
+    <div class="service-text">
+        <h2>Entrümpelung</h2>
+        <p>Platz für Neues! Wir räumen Wohnungen, Keller oder Dachböden fachgerecht und besenrein leer.</p>
+    </div>
+    <div class="service-image">
+        <img src="https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&w=800&q=80" alt="Entrümpelung">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Reinico Gebäudereinigung</p>
+</footer>
+
+</body>
+</html>
