@@ -1,16 +1,11 @@
-/* 1. GRUNDLAGEN & FARBEN */
+/* 1. ALLGEMEINES */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
     --white: #ffffff;
-    --text: #333333;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
     width: 100%;
@@ -18,17 +13,16 @@ html, body {
     font-family: 'Arial', sans-serif;
 }
 
-body {
-    padding-top: 70px; /* Platz für den Header */
-}
+/* Platz für den etwas höheren mobilen Header */
+body { padding-top: 80px; }
 
-/* 2. HEADER - Name LINKS, Menü RECHTS (Wie im Bild 2) */
+/* 2. HEADER - DESKTOP: Name LINKS, Menü RECHTS */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 9999;
@@ -41,49 +35,36 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Trennung Name/Links und Menü/Rechts */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-/* LOGO TEXT LINKS */
 .logo {
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--primary);
     white-space: nowrap;
-    display: flex;
-    gap: 5px;
 }
 
-.logo span {
-    color: var(--secondary);
-    font-weight: normal;
-}
+.logo span { color: var(--secondary); font-weight: normal; }
 
-/* NAVIGATION RECHTS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 15px; /* Abstand zwischen den Punkten */
-    align-items: center;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--secondary);
     font-weight: 600;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    transition: 0.3s;
+    font-size: 0.95rem;
 }
 
 /* 3. DROPDOWN */
-.has-dropdown {
-    position: relative;
-}
-
+.has-dropdown { position: relative; }
 .dropdown {
     position: absolute;
     top: 100%;
@@ -91,62 +72,52 @@ header {
     background: var(--white);
     display: none;
     list-style: none;
-    min-width: 200px;
+    min-width: 220px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 10px 0;
 }
+.has-dropdown:hover .dropdown { display: block; }
+.dropdown li a { padding: 10px 20px; display: block; border-bottom: 1px solid #eee; }
 
-.has-dropdown:hover .dropdown {
-    display: block;
-}
-
-/* 4. MOBILE OPTIMIERUNG (Lösung für Bild 1) */
+/* 4. MOBILE OPTIMIERUNG - NAME OBEN, MENÜ DARUNTER */
 @media (max-width: 768px) {
+    body { padding-top: 100px; }
+
     header {
-        height: 60px; /* Header etwas schmaler am Handy */
+        height: auto;
+        padding: 10px 0;
     }
 
     .header-container {
-        padding: 0 10px;
+        flex-direction: column; /* Stapelt Name und Menü */
+        gap: 8px;
     }
 
     .logo {
-        font-size: 0.9rem; /* Name kleiner, damit Platz für das Menü ist */
+        font-size: 1.1rem;
+        text-align: center;
     }
 
     .nav-links {
-        gap: 8px; /* Weniger Abstand zwischen den Wörtern */
+        width: 100%;
+        justify-content: center; /* Menü zentriert unter dem Namen */
+        gap: 12px;
+        border-top: 1px solid #f0f0f0;
+        padding-top: 8px;
     }
 
     .nav-links a {
-        font-size: 0.7rem; /* Schriftgröße verkleinert (verhindert das Umbrechen von "Jobs") */
+        font-size: 0.8rem;
     }
 
-    /* Damit das Dropdown am Handy nicht den Bildschirm sprengt */
     .dropdown {
         position: fixed;
-        top: 60px;
+        top: 95px;
         left: 0;
         width: 100%;
-        text-align: center;
     }
 }
 
-/* 5. FOOTER & WEITERE STYLES (Wichtig: 2026) */
-footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    width: 100%;
-}
-
-.btn-primary {
-    background: #0056b3;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    display: inline-block;
-}
+/* 5. FOOTER & BUTTONS */
+footer { background: var(--secondary); color: white; text-align: center; padding: 30px; width: 100%; }
+.btn-primary { background: var(--primary); color: white; padding: 14px 28px; border-radius: 5px; font-weight: bold; text-decoration: none; display: inline-block; margin-top: 20px; }
