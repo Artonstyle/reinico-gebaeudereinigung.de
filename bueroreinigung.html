@@ -1,10 +1,62 @@
-<h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;"><i class="fas fa-briefcase"></i> Büroreinigung</h1>
-<p style="font-size: 1.1rem; margin-bottom: 30px;">Ein sauberes Arbeitsumfeld fördert die Motivation. Wir sorgen für Hygiene an Schreiblächen, in Küchen und Sanitärräumen Ihrer Geschäftsstelle.</p>
-<div style="background: #eef4f9; padding: 20px; border-radius: 10px;">
-    <h4>Unsere Leistungen:</h4>
-    <ul style="margin-top: 10px; list-style: none;">
-        <li><i class="fas fa-check" style="color: green;"></i> Reinigung der Arbeitsplätze</li>
-        <li><i class="fas fa-check" style="color: green;"></i> Bodenpflege & Staubsaugen</li>
-        <li><i class="fas fa-check" style="color: green;"></i> Leerung der Papierkörbe</li>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Büroreinigung | Reinico Gebäudereinigung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Startseite</a></li>
+        <li>
+            <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                <li><a href="winterdienst.html">Winterdienst</a></li>
+                <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                <li><a href="entruempelung.html">Entrümpelung</a></li>
+            </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
     </ul>
-</div>
+</header>
+<main class="section-padding">
+    <div style="display: flex; gap: 50px; flex-wrap: wrap;">
+        <div style="flex: 2; min-width: 300px;">
+            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;"><i class="fas fa-briefcase"></i> Büroreinigung</h1>
+            <div style="width: 100%; height: 300px; background: #eee; border-radius: 15px; margin-bottom: 20px; overflow: hidden;">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+            <p style="font-size: 1.1rem; margin-bottom: 30px;">Hygiene für ein besseres Arbeitsklima. Wir reinigen Schreibtische, Sanitäranlagen und Küchenbereiche diskret und zuverlässig.</p>
+            <div style="background: #eef4f9; padding: 20px; border-radius: 10px;">
+                <h4>Unsere Leistungen:</h4>
+                <ul style="margin-top: 10px; list-style: none;">
+                    <li><i class="fas fa-check" style="color: green;"></i> Reinigung der Arbeitsplätze</li>
+                    <li><i class="fas fa-check" style="color: green;"></i> Leerung der Papierkörbe</li>
+                    <li><i class="fas fa-check" style="color: green;"></i> Sanitär- & Küchenhygiene</li>
+                </ul>
+            </div>
+        </div>
+        <div style="flex: 1; min-width: 300px; background: #f4f7fa; padding: 30px; border-radius: 15px; height: fit-content;">
+            <h3>Anfrage Büroservice</h3>
+            <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
+                <input type="text" placeholder="Name" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
+                <input type="email" placeholder="E-Mail" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
+                <textarea placeholder="Reinigungshäufigkeit (z.B. 2x pro Woche)?" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px; height:100px;"></textarea>
+                <button class="btn-primary" style="width:100%;">ANGEBOT ERHALTEN</button>
+            </form>
+        </div>
+    </div>
+</main>
+<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
+</body>
+</html>
