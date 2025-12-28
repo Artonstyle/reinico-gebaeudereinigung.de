@@ -166,7 +166,7 @@ header {
     margin-top: 20px;
 }
 
-/* 5. FOOTER */
+/* 5. FOOTER (WICHTIG: 2026) */
 footer {
     background: var(--secondary);
     color: white;
@@ -175,58 +175,58 @@ footer {
     width: 100%;
 }
 
-/* 6. MOBILE OPTIMIERUNG (ALLES IN EINER REIHE) */
+footer p {
+    margin: 0;
+}
+
+/* 6. MOBILE OPTIMIERUNG (Wieder untereinander, aber sauber) */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px; /* Kleinerer Header-Platz auf Mobile */
+        padding-top: 140px; /* Mehr Platz für den gestapelten Header */
     }
 
     header {
         height: auto;
-        padding: 10px 0;
+        padding: 15px 0;
     }
 
     .header-container {
         flex-direction: column;
-        gap: 8px;
-        padding: 5px;
+        gap: 12px;
     }
 
     .logo img {
-        height: 35px; /* Logo kleiner für mehr Platz */
+        height: 40px;
     }
 
-    .logo span {
-        font-size: 0.9rem;
-    }
-
-    /* ERZWINGT EINE REIHE */
     .nav-links {
-        flex-direction: row !important; 
-        flex-wrap: nowrap !important;   /* Kein Umbruch erlaubt */
-        justify-content: center;
+        flex-direction: column; /* Wieder untereinander */
+        align-items: center;
         width: 100%;
-        gap: 6px; /* Minimale Lücke zwischen den Links */
-        padding: 5px 0;
+        gap: 5px;
     }
 
     .nav-links li {
-        width: auto;
+        width: 100%;
+        text-align: center;
     }
 
     .nav-links a {
-        font-size: 0.7rem; /* Sehr kleine Schrift, damit 4 Wörter passen */
-        padding: 4px 2px;
-        white-space: nowrap; /* Wörter werden nicht getrennt */
+        font-size: 0.95rem;
+        padding: 8px;
+        background: #f8f9fa; /* Leichter Hintergrund für bessere Klickbarkeit */
+        border-radius: 4px;
     }
 
-    /* Dropdown auf Mobile schwebt mittig */
     .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 180px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        position: static; /* Klappt das Menü nach unten auf */
+        width: 100%;
+        box-shadow: none;
+        display: none;
+        background: #f1f1f1;
+    }
+
+    .has-dropdown:hover .dropdown {
+        display: block;
     }
 }
