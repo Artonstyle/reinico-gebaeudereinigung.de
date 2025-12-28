@@ -2,11 +2,13 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gartenpflege | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
+
 <header>
     <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
     <ul class="nav-links">
@@ -30,34 +32,49 @@
         <li><a href="jobs.html">Jobs</a></li>
     </ul>
 </header>
+
 <main class="section-padding">
-    <div style="display: flex; gap: 50px; flex-wrap: wrap;">
+    <div style="display: flex; gap: 50px; flex-wrap: wrap; align-items: flex-start;">
+        
         <div style="flex: 2; min-width: 300px;">
             <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;"><i class="fas fa-leaf"></i> Gartenpflege</h1>
-            <div style="width: 100%; height: 300px; background: #eee; border-radius: 15px; margin-bottom: 20px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1558905745-04b905096081?w=1200" style="width: 100%; height: 100%; object-fit: cover;">
+            
+            <div style="width: 100%; height: 400px; border-radius: 15px; margin-bottom: 30px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                <img src="image/gartenpflege.png" alt="Reinico Gartenpflege und Außenanlagen" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
-            <p style="font-size: 1.1rem; margin-bottom: 30px;">Ihre Grünanlage in besten Händen. Von Rasenmähen bis Heckenschnitt – wir halten Ihre Außenanlage das ganze Jahr über in Schuss.</p>
-            <div style="background: #eef4f9; padding: 20px; border-radius: 10px;">
-                <h4>Unsere Leistungen:</h4>
-                <ul style="margin-top: 10px; list-style: none;">
-                    <li><i class="fas fa-check" style="color: green;"></i> Rasenmähen & Vertikutieren</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Hecken- & Strauchschnitt</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Unkrautentfernung & Laubdienst</li>
+
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px;">
+                Eine gepflegte Grünanlage ist die Visitenkarte Ihres Hauses oder Firmengeländes. Wir kümmern uns mit Leidenschaft und Fachverstand um Ihren Garten. Ob Rasenmähen, Heckenschnitt oder die allgemeine Beetpflege – wir sorgen dafür, dass Ihre Außenanlage zu jeder Jahreszeit in bestem Licht erstrahlt.
+            </p>
+
+            <div style="background: #f1f8e9; padding: 30px; border-radius: 10px; border-left: 5px solid #689f38;">
+                <h4 style="margin-bottom: 15px;">Unsere Leistungen im Garten:</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #689f38; margin-right: 10px;"></i> Fachgerechter Rasenschnitt & Düngung</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #689f38; margin-right: 10px;"></i> Hecken-, Strauch- und Baumschnitt</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #689f38; margin-right: 10px;"></i> Unkrautentfernung & Laubreinigung</li>
+                    <li><i class="fas fa-check" style="color: #689f38; margin-right: 10px;"></i> Entsorgung von Gartenabfällen</li>
                 </ul>
             </div>
         </div>
-        <div style="flex: 1; min-width: 300px; background: #f4f7fa; padding: 30px; border-radius: 15px; height: fit-content;">
-            <h3>Anfrage Gartenpflege</h3>
+
+        <div style="flex: 1; min-width: 320px; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #eee;">
+            <h3 style="margin-bottom: 20px; color: var(--primary);">Garten-Anfrage</h3>
             <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
-                <input type="text" placeholder="Name" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <input type="email" placeholder="E-Mail" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <textarea placeholder="Welche Arbeiten stehen an?" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px; height:100px;"></textarea>
-                <button class="btn-primary" style="width:100%;">ANGEBOT ERHALTEN</button>
+                <input type="text" name="Name" placeholder="Ihr Name" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius: 5px;">
+                <input type="email" name="Email" placeholder="E-Mail Adresse" required style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius: 5px;">
+                <input type="text" name="Ort" placeholder="Ort des Gartens" style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius: 5px;">
+                <textarea name="Nachricht" placeholder="Welche Arbeiten stehen an? (z.B. Heckenschnitt, regelmäßiges Mähen...)" style="width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius: 5px; height: 120px;"></textarea>
+                <button type="submit" class="btn-primary" style="width:100%; padding: 18px; border: none; cursor: pointer; font-weight: bold;">KOSTENLOSES ANGEBOT</button>
             </form>
         </div>
+
     </div>
 </main>
-<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
+
+<footer>
+    <p>&copy; 2025 Reinico Gebäudereinigung | <a href="impressum.html" style="color: white;">Impressum & Datenschutz</a></p>
+</footer>
+
 </body>
 </html>
