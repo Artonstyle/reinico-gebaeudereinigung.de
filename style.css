@@ -3,7 +3,6 @@
     --primary: #0056b3;
     --secondary: #2c3e50;
     --white: #ffffff;
-    --light-bg: #f4f7fa;
     --text: #333333;
 }
 
@@ -17,70 +16,74 @@ html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: 'Arial', sans-serif;
-    color: var(--text);
 }
 
 body {
-    padding-top: 80px; /* Platz für fixierten Header */
+    padding-top: 70px; /* Platz für den Header */
 }
 
-/* 2. HEADER - DESKTOP (Name LINKS, Menü RECHTS) */
+/* 2. HEADER - Name LINKS, Menü RECHTS (Wie im Bild 2) */
 header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 70px;
     background: var(--white);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     z-index: 9999;
+    display: flex;
+    align-items: center;
 }
 
 .header-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%;
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between; /* Trennung Name/Links und Menü/Rechts */
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
+/* LOGO TEXT LINKS */
 .logo {
     text-decoration: none;
-    color: var(--primary);
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    color: var(--primary);
     white-space: nowrap;
+    display: flex;
+    gap: 5px;
 }
 
 .logo span {
     color: var(--secondary);
     font-weight: normal;
-    margin-left: 5px;
 }
 
+/* NAVIGATION RECHTS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
-}
-
-.has-dropdown {
-    position: relative;
+    gap: 15px; /* Abstand zwischen den Punkten */
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--secondary);
     font-weight: 600;
-    font-size: 0.95rem;
-    padding: 10px 0;
-    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
     transition: 0.3s;
 }
 
 /* 3. DROPDOWN */
+.has-dropdown {
+    position: relative;
+}
+
 .dropdown {
     position: absolute;
     top: 100%;
@@ -88,91 +91,62 @@ header {
     background: var(--white);
     display: none;
     list-style: none;
-    min-width: 230px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-radius: 0 0 5px 5px;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 10px 0;
-    z-index: 10000;
 }
 
 .has-dropdown:hover .dropdown {
     display: block;
 }
 
-.dropdown li a {
-    padding: 10px 20px;
-    border-bottom: 1px solid #f1f1f1;
-    font-weight: normal;
-}
-
-/* 4. MOBILE ANSICHT (Optimiert für Handy) */
+/* 4. MOBILE OPTIMIERUNG (Lösung für Bild 1) */
 @media (max-width: 768px) {
-    body {
-        padding-top: 90px;
-    }
-
     header {
-        height: auto;
-        padding: 8px 0;
+        height: 60px; /* Header etwas schmaler am Handy */
     }
 
     .header-container {
-        flex-direction: column; /* Name oben, Menü darunter */
-        gap: 5px;
         padding: 0 10px;
     }
 
     .logo {
-        font-size: 1.1rem; /* Name etwas kleiner auf Handy */
+        font-size: 0.9rem; /* Name kleiner, damit Platz für das Menü ist */
     }
 
     .nav-links {
-        flex-direction: row !important; /* Nebeneinander erzwingen */
-        justify-content: space-between;
-        width: 100%; /* Nutzt die volle Breite */
-        gap: 0; 
-        padding-top: 5px;
-        border-top: 1px solid #eee; /* Trennung vom Namen */
-    }
-
-    .nav-links li {
-        flex: 1;
-        text-align: center;
+        gap: 8px; /* Weniger Abstand zwischen den Wörtern */
     }
 
     .nav-links a {
-        font-size: 0.75rem; /* Kompakte Schrift */
-        padding: 8px 2px;
-        color: var(--primary); /* Bessere Sichtbarkeit am Handy */
+        font-size: 0.7rem; /* Schriftgröße verkleinert (verhindert das Umbrechen von "Jobs") */
     }
 
-    /* Dropdown am Handy zentrieren */
+    /* Damit das Dropdown am Handy nicht den Bildschirm sprengt */
     .dropdown {
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 200px;
-        right: auto;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
     }
 }
 
-/* 5. FOOTER & BUTTONS */
+/* 5. FOOTER & WEITERE STYLES (Wichtig: 2026) */
 footer {
-    background: var(--secondary);
+    background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px;
+    width: 100%;
 }
 
 .btn-primary {
-    background: var(--primary);
+    background: #0056b3;
     color: white;
-    padding: 14px 28px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
-    display: inline-block;
     font-weight: bold;
-    margin-top: 20px;
-    border: none;
+    display: inline-block;
 }
