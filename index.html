@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinico Gebäudereinigung | Home</title>
+    <title>Reinico Gebäudereinigung | Ihr Partner für Sauberkeit</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
 
 <header>
-    <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
+    <a href="index.html" class="logo">
+        <img src="image/reinico-logo.png" alt="Reinico Logo" style="height: 50px; width: auto; vertical-align: middle;">
+        <span style="display: inline-block; vertical-align: middle; margin-left: 10px;">Gebäudereinigung</span>
+    </a>
+    
     <ul class="nav-links">
         <li><a href="index.html">Startseite</a></li>
         <li>
@@ -33,44 +37,72 @@
     </ul>
 </header>
 
-<section class="hero">
-    <h1>Reinico Gebäudereinigung</h1>
-    <p>Expertise und Erfahrung für Ihr Objekt</p>
-    <br>
+<section style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/hero-bg.jpg') center/cover; padding: 80px 20px; text-align: center; color: white;">
+    <img src="image/reinico-logo.png" alt="Reinico Logo Groß" style="width: 180px; height: auto; margin-bottom: 20px; filter: drop-shadow(0px 0px 10px rgba(255,255,255,0.3));">
+    <h1 style="font-size: 2.8rem; margin-bottom: 20px;">Reinico Gebäudereinigung</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">Expertise und Erfahrung für Ihr Objekt. Wir sorgen für strahlende Sauberkeit in jedem Winkel.</p>
     <a href="kontakt.html" class="btn-primary">JETZT ANGEBOT ANFORDERN</a>
 </section>
 
 <section class="section-padding">
-    <div style="text-align: center; margin-bottom: 50px;">
-        <h2 style="color: var(--primary); font-size: 2.5rem;">Unsere Expertise</h2>
-    </div>
+    <h2 style="text-align: center; color: var(--primary); font-size: 2.5rem; margin-bottom: 40px;">Unsere Expertise</h2>
     
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-        <div class="card-simple" onclick="location.href='fensterreinigung.html'">
-            <i class="fas fa-window-maximize"></i>
+    <div class="expertise-grid">
+        <div class="expertise-card">
+            <i class="fas fa-window-maximize" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
             <h3>Fensterreinigung</h3>
             <p>Glasklare Sicht für Ihr Objekt.</p>
+            <a href="fensterreinigung.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">Mehr erfahren →</a>
         </div>
-        <div class="card-simple" onclick="location.href='bueroreinigung.html'">
-            <i class="fas fa-building"></i>
+
+        <div class="expertise-card">
+            <i class="fas fa-building" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
             <h3>Büroreinigung</h3>
             <p>Hygiene am Arbeitsplatz.</p>
+            <a href="bueroreinigung.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">Mehr erfahren →</a>
         </div>
-        <div class="card-simple" onclick="location.href='winterdienst.html'">
-            <i class="fas fa-snowflake"></i>
+
+        <div class="expertise-card">
+            <i class="fas fa-snowflake" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
             <h3>Winterdienst</h3>
             <p>Sicherheit bei Eis und Schnee.</p>
+            <a href="winterdienst.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">Mehr erfahren →</a>
         </div>
-        <div class="card-simple" onclick="location.href='entruempelung.html'">
-            <i class="fas fa-truck-loading"></i>
+
+        <div class="expertise-card">
+            <i class="fas fa-truck-loading" style="font-size: 2rem; color: var(--primary); margin-bottom: 15px;"></i>
             <h3>Entrümpelung</h3>
             <p>Wir schaffen Platz für Neues.</p>
+            <a href="entruempelung.html" style="color: var(--primary); text-decoration: none; font-weight: bold; display: block; margin-top: 15px;">Mehr erfahren →</a>
+        </div>
+    </div>
+</section>
+
+<section style="background-color: var(--light-bg); padding: 60px 10%;">
+    <div style="max-width: 1000px; margin: auto; text-align: center;">
+        <h2 style="color: var(--secondary); margin-bottom: 20px;">Warum Reinico?</h2>
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; margin-top: 30px;">
+            <div style="flex: 1; min-width: 200px;">
+                <i class="fas fa-clock" style="font-size: 1.5rem; color: var(--primary);"></i>
+                <h4 style="margin-top: 10px;">Pünktlichkeit</h4>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <i class="fas fa-shield-alt" style="font-size: 1.5rem; color: var(--primary);"></i>
+                <h4 style="margin-top: 10px;">Versichert</h4>
+            </div>
+            <div style="flex: 1; min-width: 200px;">
+                <i class="fas fa-star" style="font-size: 1.5rem; color: var(--primary);"></i>
+                <h4 style="margin-top: 10px;">Top Qualität</h4>
+            </div>
         </div>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2026 Reinico Gebäudereinigung | Professioneller Objektservice</p>
+    <div style="margin-top: 15px;">
+        <a href="impressum.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Impressum & Datenschutz</a>
+    </div>
 </footer>
 
 </body>
