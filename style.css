@@ -41,14 +41,11 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    /* justify-content: flex-end schiebt alles nach RECHTS */
+    /* RECHTSBÜNDIG FÜR PC */
     justify-content: flex-end; 
     align-items: center;
     padding: 0 20px;
 }
-
-/* Falls du doch ein unsichtbares Element links hättest, 
-   wäre space-between auch möglich, aber flex-end erzwingt die rechte Seite. */
 
 .nav-links {
     display: flex;
@@ -57,7 +54,7 @@ header {
 }
 
 .has-dropdown {
-    position: relative; /* Wichtig für die Position des Untermenüs */
+    position: relative;
 }
 
 .nav-links a {
@@ -78,7 +75,7 @@ header {
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0; /* Richtet das Dropdown bündig an der rechten Kante aus */
+    right: 0; /* Richtet das Dropdown rechtsbündig am Link aus */
     background: var(--white);
     display: none;
     list-style: none;
@@ -136,7 +133,7 @@ footer {
 /* 6. MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
     body {
-        padding-top: 140px; /* Platz für die untereinander stehenden Links */
+        padding-top: 140px;
     }
 
     header {
@@ -145,7 +142,7 @@ footer {
     }
 
     .header-container {
-        justify-content: center; /* Auf dem Handy sieht zentriert meist besser aus */
+        justify-content: center; /* Zentriert auf dem Handy für bessere Bedienung */
     }
 
     .nav-links {
@@ -167,7 +164,7 @@ footer {
     }
 
     .dropdown {
-        position: static; /* Schiebt auf Mobile den Inhalt nach unten */
+        position: static;
         width: 100%;
         box-shadow: none;
         display: none;
