@@ -1,4 +1,4 @@
-/* 1. GRUND-EINSTELLUNGEN & HANDY-SCHUTZ */
+/* 1. GRUNDLEGENDE VARIABLEN & RESET */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
@@ -10,35 +10,37 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Verhindert, dass Padding die Breite sprengt */
+    box-sizing: border-box;
 }
 
 html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Verhindert das seitliche Wackeln/Scrollen */
-    -webkit-text-size-adjust: 100%;
+    overflow-x: hidden; /* Verhindert seitliches Scrollen/Abschneiden auf dem Handy */
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text);
+    padding-top: 80px; /* Platz für den fixierten Header */
 }
 
-/* 2. HEADER (Logo & Menü) */
+/* 2. HEADER (Fixiert am oberen Rand) */
 header {
     background: var(--white);
-    padding: 10px 5%;
+    padding: 5px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
     width: 100%;
+    z-index: 1000;
+    min-height: 70px;
 }
 
 .logo {
@@ -49,10 +51,21 @@ header {
     font-weight: bold;
 }
 
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.logo span {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* NAVIGATION LINKS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 .nav-links a {
@@ -60,9 +73,14 @@ header {
     color: var(--secondary);
     font-weight: 600;
     font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-/* Dropdown (Desktop) */
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+/* DROPDOWN (Desktop) */
 .dropdown {
     position: absolute;
     top: 100%;
@@ -72,24 +90,23 @@ header {
     list-style: none;
     min-width: 200px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 0 0 5px 5px;
 }
 
 .nav-links li:hover .dropdown {
     display: block;
 }
 
-/* 3. LAYOUT & BILDER */
-.section-padding {
-    padding: 40px 5%;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+.dropdown li a {
+    padding: 10px 15px;
+    display: block;
 }
 
-img {
-    max-width: 100%; /* Bild darf niemals breiter als der Bildschirm sein */
-    height: auto;
-    display: block;
+/* 3. LAYOUT-ELEMENTE */
+.section-padding {
+    padding: 40px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .btn-primary {
@@ -99,78 +116,93 @@ img {
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
+    font-weight: bold;
     border: none;
+    margin-top: 10px;
 }
 
-/* 4. EXPERTISE GRID (Startseite) */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* EXPERTISE GRID (Startseite) */
 .expertise-grid {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    width: 100%;
 }
 
 .expertise-card {
     background: white;
     border: 1px solid #eee;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     flex: 1;
-    min-width: 280px; /* Breite einer Karte auf Mobile */
+    min-width: 280px;
     max-width: 350px;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-/* 5. MOBILE OPTIMIERUNG (WICHTIG!) */
+/* 4. MOBILE OPTIMIERUNG (HANDY-REPARATUR) */
 @media (max-width: 768px) {
+    body {
+        padding-top: 120px; /* Mehr Platz auf Mobile für den zweizeiligen Header */
+    }
+
     header {
         flex-direction: column; /* Logo oben, Menü darunter */
-        padding: 15px;
+        padding: 10px;
+    }
+
+    .logo span {
+        font-size: 1rem;
     }
 
     .nav-links {
-        flex-direction: column;
-        align-items: center;
         width: 100%;
-        margin-top: 15px;
+        justify-content: center;
+        margin-top: 10px;
+        flex-wrap: wrap;
         gap: 10px;
-        display: flex !important; /* Sicherstellen, dass es sichtbar bleibt */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
     }
 
     .dropdown {
-        position: static;
-        box-shadow: none;
-        display: none; /* Auf Mobile Dropdown ausblenden oder untereinander */
-        background: #f9f9f9;
-        width: 100%;
-        text-align: center;
+        display: none !important; /* Dropdowns auf Mobile ausblenden für mehr Platz */
     }
 
-    /* Das hier repariert die "halbe Seite": */
+    /* Zwingt alle Inhalts-Blöcke (Bild/Text) untereinander */
     main div[style*="display: flex"], 
-    .section-padding div {
-        flex-direction: column !important; /* Alles untereinander stapeln */
+    .section-padding div[style*="display: flex"] {
+        flex-direction: column !important;
         width: 100% !important;
-        margin: 0 !important;
-        gap: 20px !important;
     }
 
-    /* Alle festen Breiten im HTML überschreiben */
+    /* Verhindert das Rausrutschen nach rechts */
     div, section, main {
-        width: 100% !important;
         max-width: 100% !important;
-        min-width: 0 !important;
     }
-
-    h1 { font-size: 1.8rem !important; }
 }
 
-/* 6. FOOTER */
+/* 5. FOOTER */
 footer {
     background: var(--secondary);
     color: white;
     padding: 40px 20px;
     text-align: center;
     width: 100%;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
 }
