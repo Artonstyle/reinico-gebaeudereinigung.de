@@ -21,10 +21,10 @@ html, body {
 }
 
 body {
-    padding-top: 80px; /* Platz für den fixierten Header */
+    padding-top: 80px;
 }
 
-/* 2. HEADER & NAVIGATION (DESKTOP) */
+/* 2. HEADER & NAVIGATION */
 header {
     position: fixed;
     top: 0;
@@ -41,27 +41,9 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; /* Schiebt das Menü nach ganz rechts, da kein Logo da ist */
     align-items: center;
     padding: 0 20px;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--primary);
-    font-weight: bold;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-}
-
-.logo span {
-    margin-left: 10px;
-    font-size: 1.1rem;
 }
 
 .nav-links {
@@ -92,7 +74,7 @@ header {
 .dropdown {
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0; /* Dropdown richtet sich am rechten Rand des Links aus */
     background: var(--white);
     display: none;
     list-style: none;
@@ -119,40 +101,10 @@ header {
 }
 
 /* 4. SEKTIONEN & CONTENT */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image/hero-bg.jpg') center/cover;
-    min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--white);
-    padding: 40px 20px;
-}
-
 .section-padding {
     padding: 60px 5%;
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.expertise-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.expertise-card {
-    background: var(--white);
-    border: 1px solid #eee;
-    padding: 30px;
-    border-radius: 12px;
-    flex: 1;
-    min-width: 280px;
-    max-width: 350px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
 .btn-primary {
@@ -166,7 +118,7 @@ header {
     margin-top: 20px;
 }
 
-/* 5. FOOTER (WICHTIG: 2026) */
+/* 5. FOOTER */
 footer {
     background: var(--secondary);
     color: white;
@@ -175,14 +127,10 @@ footer {
     width: 100%;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* 6. MOBILE OPTIMIERUNG (Wieder untereinander, aber sauber) */
+/* 6. MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
     body {
-        padding-top: 140px; /* Mehr Platz für den gestapelten Header */
+        padding-top: 100px;
     }
 
     header {
@@ -191,39 +139,29 @@ footer p {
     }
 
     .header-container {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .logo img {
-        height: 40px;
+        justify-content: center; /* Zentriert das Menü auf dem Handy */
     }
 
     .nav-links {
-        flex-direction: column; /* Wieder untereinander */
+        flex-direction: column;
         align-items: center;
         width: 100%;
-        gap: 5px;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
+        gap: 8px;
     }
 
     .nav-links a {
-        font-size: 0.95rem;
-        padding: 8px;
-        background: #f8f9fa; /* Leichter Hintergrund für bessere Klickbarkeit */
+        background: #f8f9fa;
+        width: 100%;
+        text-align: center;
         border-radius: 4px;
+        padding: 10px;
     }
 
     .dropdown {
-        position: static; /* Klappt das Menü nach unten auf */
+        position: static;
         width: 100%;
         box-shadow: none;
         display: none;
-        background: #f1f1f1;
     }
 
     .has-dropdown:hover .dropdown {
