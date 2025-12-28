@@ -1,4 +1,4 @@
-/* 1. GRUNDLAGEN */
+/* 1. GRUNDLAGEN & FARBEN */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
@@ -19,10 +19,10 @@ html, body {
 }
 
 body {
-    padding-top: 70px;
+    padding-top: 70px; /* Platz für den Header */
 }
 
-/* 2. HEADER - Name LINKS, Menü RECHTS */
+/* 2. HEADER - Name LINKS, Menü RECHTS (Wie im Bild 2) */
 header {
     position: fixed;
     top: 0;
@@ -41,17 +41,20 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Trennung Name/Links und Menü/Rechts */
     align-items: center;
     padding: 0 15px;
 }
 
+/* LOGO TEXT LINKS */
 .logo {
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
     color: var(--primary);
     white-space: nowrap;
+    display: flex;
+    gap: 5px;
 }
 
 .logo span {
@@ -59,11 +62,11 @@ header {
     font-weight: normal;
 }
 
-/* NAVIGATION */
+/* NAVIGATION RECHTS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 15px;
+    gap: 15px; /* Abstand zwischen den Punkten */
     align-items: center;
 }
 
@@ -73,6 +76,7 @@ header {
     font-weight: 600;
     font-size: 0.9rem;
     white-space: nowrap;
+    transition: 0.3s;
 }
 
 /* 3. DROPDOWN */
@@ -90,55 +94,59 @@ header {
     min-width: 200px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     padding: 10px 0;
-    z-index: 10001;
 }
 
 .has-dropdown:hover .dropdown {
     display: block;
 }
 
-.dropdown li a {
-    padding: 10px 20px;
-    display: block;
-    border-bottom: 1px solid #eee;
-}
-
-/* 4. MOBILE OPTIMIERUNG (REIHE OHNE UMBRUCH) */
+/* 4. MOBILE OPTIMIERUNG (Lösung für Bild 1) */
 @media (max-width: 768px) {
     header {
-        height: 65px;
+        height: 60px; /* Header etwas schmaler am Handy */
     }
 
     .header-container {
-        padding: 0 8px;
+        padding: 0 10px;
     }
 
     .logo {
-        font-size: 0.85rem; /* Etwas kleiner für Mobile */
+        font-size: 0.9rem; /* Name kleiner, damit Platz für das Menü ist */
     }
 
     .nav-links {
-        gap: 6px; /* Engerer Abstand für Mobile */
+        gap: 8px; /* Weniger Abstand zwischen den Wörtern */
     }
 
     .nav-links a {
-        font-size: 0.7rem; /* Schriftgröße, damit alles passt */
+        font-size: 0.7rem; /* Schriftgröße verkleinert (verhindert das Umbrechen von "Jobs") */
     }
 
+    /* Damit das Dropdown am Handy nicht den Bildschirm sprengt */
     .dropdown {
         position: fixed;
-        top: 65px;
+        top: 60px;
         left: 0;
         width: 100%;
         text-align: center;
     }
 }
 
-/* 5. FOOTER (2026) */
+/* 5. FOOTER & WEITERE STYLES (Wichtig: 2026) */
 footer {
-    background: var(--secondary);
+    background: #2c3e50;
     color: white;
     text-align: center;
     padding: 30px;
     width: 100%;
+}
+
+.btn-primary {
+    background: #0056b3;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
 }
