@@ -24,7 +24,7 @@ body {
     padding-top: 80px; /* Platz für fixierten Header */
 }
 
-/* 2. HEADER - Name LINKS, Menü RECHTS */
+/* 2. HEADER - DESKTOP (Name LINKS, Menü RECHTS) */
 header {
     position: fixed;
     top: 0;
@@ -50,7 +50,7 @@ header {
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     white-space: nowrap;
 }
 
@@ -63,7 +63,7 @@ header {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 25px;
 }
 
 .has-dropdown {
@@ -105,48 +105,55 @@ header {
     font-weight: normal;
 }
 
-/* 4. MOBILE ANSICHT (NEBENEINANDER) */
+/* 4. MOBILE ANSICHT (Optimiert für Handy) */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px; /* Weniger Platzbedarf als bei Liste */
+        padding-top: 90px;
     }
 
     header {
         height: auto;
-        padding: 10px 0;
+        padding: 8px 0;
     }
 
     .header-container {
         flex-direction: column; /* Name oben, Menü darunter */
-        gap: 10px;
-        justify-content: center;
+        gap: 5px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        font-size: 1.1rem; /* Name etwas kleiner auf Handy */
     }
 
     .nav-links {
-        flex-direction: row !important; /* Erzwingt nebeneinander */
-        flex-wrap: nowrap !important;   /* Kein Umbruch erlaubt */
-        justify-content: center;
-        width: 100%;
-        gap: 8px; /* Kleiner Abstand zwischen den Punkten */
+        flex-direction: row !important; /* Nebeneinander erzwingen */
+        justify-content: space-between;
+        width: 100%; /* Nutzt die volle Breite */
+        gap: 0; 
+        padding-top: 5px;
+        border-top: 1px solid #eee; /* Trennung vom Namen */
     }
 
     .nav-links li {
-        width: auto;
+        flex: 1;
+        text-align: center;
     }
 
     .nav-links a {
-        font-size: 0.75rem; /* Schrift kleiner, damit alles in eine Reihe passt */
-        padding: 5px 2px;
-        background: transparent; /* Kein Hintergrund am Handy nötig bei Reihe */
-        white-space: nowrap;
+        font-size: 0.75rem; /* Kompakte Schrift */
+        padding: 8px 2px;
+        color: var(--primary); /* Bessere Sichtbarkeit am Handy */
     }
 
+    /* Dropdown am Handy zentrieren */
     .dropdown {
-        position: absolute; /* Dropdown schwebt wieder */
+        position: absolute;
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
-        min-width: 180px;
+        min-width: 200px;
+        right: auto;
     }
 }
 
@@ -156,7 +163,6 @@ footer {
     color: white;
     text-align: center;
     padding: 40px 20px;
-    width: 100%;
 }
 
 .btn-primary {
