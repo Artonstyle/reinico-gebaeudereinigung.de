@@ -1,8 +1,7 @@
-/* 1. GRUNDLEGENDE VARIABLEN & RESET */
+/* 1. GRUND-EINSTELLUNGEN & HANDY-SCHUTZ */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
-    --accent: #e67e22;
     --light-bg: #f4f7fa;
     --white: #ffffff;
     --text: #333333;
@@ -11,22 +10,27 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Verhindert, dass Padding die Breite sprengt */
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Verhindert das seitliche Wackeln/Scrollen */
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background-color: var(--white);
-    overflow-x: hidden; /* Verhindert seitliches Scrollen auf Handys */
-    width: 100%;
 }
 
-/* 2. HEADER & NAVIGATION */
+/* 2. HEADER (Logo & Menü) */
 header {
     background: var(--white);
-    padding: 15px 5%;
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,169 +38,139 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
+    display: flex;
+    align-items: center;
     text-decoration: none;
-}
-
-.logo span {
-    color: #888;
-    font-weight: 300;
-    margin-left: 5px;
+    color: var(--primary);
+    font-weight: bold;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
-}
-
-.nav-links li {
-    position: relative;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--secondary);
     font-weight: 600;
-    transition: 0.3s;
+    font-size: 0.9rem;
 }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-/* 3. DROPDOWN MENÜ */
+/* Dropdown (Desktop) */
 .dropdown {
     position: absolute;
     top: 100%;
     left: 0;
     background: var(--white);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     display: none;
     list-style: none;
-    min-width: 220px;
-    border-radius: 0 0 8px 8px;
-    padding: 10px 0;
-}
-
-.dropdown li a {
-    padding: 10px 20px;
-    display: block;
-    font-weight: normal;
-    font-size: 0.9rem;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .nav-links li:hover .dropdown {
     display: block;
 }
 
-/* 4. SEKTIONEN & LAYOUT */
+/* 3. LAYOUT & BILDER */
 .section-padding {
-    padding: 60px 10%;
+    padding: 40px 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%; /* Bild darf niemals breiter als der Bildschirm sein */
+    height: auto;
+    display: block;
 }
 
 .btn-primary {
     background: var(--primary);
-    color: var(--white);
+    color: white;
     padding: 12px 25px;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    font-weight: bold;
     border: none;
-    transition: 0.3s;
-    cursor: pointer;
 }
 
-.btn-primary:hover {
-    background: #004494;
-    transform: translateY(-2px);
-}
-
-/* 5. EXPERTISE KARTEN (Startseite) */
+/* 4. EXPERTISE GRID (Startseite) */
 .expertise-grid {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: center;
-    margin-top: 40px;
+    width: 100%;
 }
 
 .expertise-card {
-    background: var(--white);
+    background: white;
     border: 1px solid #eee;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
     flex: 1;
-    min-width: 250px;
-    max-width: 300px;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    min-width: 280px; /* Breite einer Karte auf Mobile */
+    max-width: 350px;
+    text-align: center;
 }
 
-.expertise-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* 6. MOBILE OPTIMIERUNG (Handy-Ansicht) */
+/* 5. MOBILE OPTIMIERUNG (WICHTIG!) */
 @media (max-width: 768px) {
     header {
         flex-direction: column; /* Logo oben, Menü darunter */
-        text-align: center;
         padding: 15px;
     }
 
     .nav-links {
-        margin-top: 20px;
-        flex-direction: column; /* Menüpunkte untereinander */
-        gap: 12px;
+        flex-direction: column;
+        align-items: center;
         width: 100%;
+        margin-top: 15px;
+        gap: 10px;
+        display: flex !important; /* Sicherstellen, dass es sichtbar bleibt */
     }
 
     .dropdown {
-        position: static; /* Dropdown klappt unter dem Punkt aus */
+        position: static;
         box-shadow: none;
+        display: none; /* Auf Mobile Dropdown ausblenden oder untereinander */
         background: #f9f9f9;
-        display: block; /* Auf Mobile zeigen wir die Liste oft direkt */
-        min-width: 100%;
+        width: 100%;
+        text-align: center;
     }
 
-    .section-padding {
-        padding: 40px 20px;
+    /* Das hier repariert die "halbe Seite": */
+    main div[style*="display: flex"], 
+    .section-padding div {
+        flex-direction: column !important; /* Alles untereinander stapeln */
+        width: 100% !important;
+        margin: 0 !important;
+        gap: 20px !important;
     }
 
-    /* Damit die Dienstleistungs-Seiten (Bild links, Text rechts) untereinander rutschen */
-    main div[style*="display: flex"] {
-        flex-direction: column !important;
-        gap: 30px !important;
+    /* Alle festen Breiten im HTML überschreiben */
+    div, section, main {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
     }
 
-    img {
-        height: auto !important; /* Verhindert verzerrte Bilder */
-    }
-    
-    .logo span {
-        display: block;
-        font-size: 0.8rem;
-    }
+    h1 { font-size: 1.8rem !important; }
 }
 
-/* 7. FOOTER */
+/* 6. FOOTER */
 footer {
     background: var(--secondary);
-    color: var(--white);
-    padding: 40px 10%;
+    color: white;
+    padding: 40px 20px;
     text-align: center;
-}
-
-footer a {
-    color: #bdc3c7;
-    text-decoration: none;
-    margin: 0 10px;
+    width: 100%;
 }
