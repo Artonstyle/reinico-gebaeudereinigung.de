@@ -2,22 +2,69 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Jobs | Reinico</title>
+    <title>Karriere | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
 <header>
     <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
     <ul class="nav-links">
         <li><a href="index.html">Startseite</a></li>
-        <li><a href="dienstleistungen.html">Unsere Dienstleistungen</a></li>
+        <li>
+            <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                <li><a href="winterdienst.html">Winterdienst</a></li>
+                <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                <li><a href="entruempelung.html">Entrümpelung</a></li>
+            </ul>
+        </li>
         <li><a href="kontakt.html">Kontakt</a></li>
         <li><a href="jobs.html">Jobs</a></li>
     </ul>
 </header>
-<section class="section-padding" style="text-align: center;">
-    <h1>Wir suchen dich!</h1>
-    <p>Werde Teil unseres Reinigungsteams. Bewerbungen an jobs@reinico.de</p>
-</section>
+
+<main class="section-padding">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h1 style="color: var(--primary); font-size: 2.5rem;">Werden Sie Teil unseres Teams!</h1>
+        <p style="font-size: 1.2rem; color: #666;">Wir suchen motivierte Mitarbeiter für die Gebäudereinigung.</p>
+    </div>
+
+    <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+        <div style="flex: 1; min-width: 300px; max-width: 500px; background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 15px; border-top: 5px solid var(--primary);">
+            <h3>Reinigungskraft (m/w/d)</h3>
+            <p style="margin: 15px 0;"><strong>Art:</strong> Teilzeit / Vollzeit / Minijob</p>
+            <p><strong>Ihre Aufgaben:</strong><br>Unterhaltsreinigung von Büros und Privathaushalten, Glasreinigung.</p>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+            <p><strong>Wir bieten:</strong><br>Pünktliche Bezahlung, ein nettes Team und hochwertige Arbeitsmaterialien.</p>
+            <br>
+            <a href="mailto:jobs@reinico.de" class="btn-primary" style="display: block; text-align: center;">JETZT BEWERBEN</a>
+        </div>
+
+        <div style="flex: 1; min-width: 300px; max-width: 500px; background: #fff; border: 1px solid #eee; padding: 30px; border-radius: 15px; border-top: 5px solid var(--primary);">
+            <h3>Hausmeister-Assistent (m/w/d)</h3>
+            <p style="margin: 15px 0;"><strong>Art:</strong> Teilzeit / Vollzeit</p>
+            <p><strong>Ihre Aufgaben:</strong><br>Unterstützung bei Gartenpflege, Winterdienst und kleinen Reparaturen.</p>
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+            <p><strong>Wir bieten:</strong><br>Abwechslungsreiche Aufgaben und eine gründliche Einarbeitung.</p>
+            <br>
+            <a href="mailto:jobs@reinico.de" class="btn-primary" style="display: block; text-align: center;">JETZT BEWERBEN</a>
+        </div>
+    </div>
+
+    <div style="margin-top: 50px; text-align: center; background: #eef4f9; padding: 40px; border-radius: 15px;">
+        <h3>Nichts Passendes dabei?</h3>
+        <p>Senden Sie uns gerne Ihre Initiativbewerbung an <strong>jobs@reinico.de</strong></p>
+    </div>
+</main>
+
+<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
 </body>
 </html>
