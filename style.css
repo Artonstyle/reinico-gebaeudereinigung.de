@@ -1,8 +1,9 @@
-/* 1. GRUNDLAGEN */
+/* 1. GRUNDLAGEN & FARBEN */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
     --white: #ffffff;
+    --light-bg: #f4f7fa;
     --text: #333333;
 }
 
@@ -40,18 +41,16 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    /* Dies ist der wichtigste Befehl für die Trennung */
     justify-content: space-between; 
     align-items: center;
     padding: 0 20px;
 }
 
-/* NAME LINKS */
 .logo {
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     white-space: nowrap;
 }
 
@@ -61,11 +60,10 @@ header {
     margin-left: 5px;
 }
 
-/* NAVIGATION RECHTS */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
 }
 
 .has-dropdown {
@@ -82,11 +80,11 @@ header {
     transition: 0.3s;
 }
 
-/* 3. DROPDOWN (Rechtsbündig unter dem Menüpunkt) */
+/* 3. DROPDOWN */
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0; /* Richtet das Dropdown an der rechten Kante des Links aus */
+    right: 0;
     background: var(--white);
     display: none;
     list-style: none;
@@ -103,12 +101,56 @@ header {
 
 .dropdown li a {
     padding: 10px 20px;
-    font-weight: normal;
     border-bottom: 1px solid #f1f1f1;
-    text-align: left;
+    font-weight: normal;
 }
 
-/* 4. FOOTER (2026) */
+/* 4. MOBILE ANSICHT (NEBENEINANDER) */
+@media (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Weniger Platzbedarf als bei Liste */
+    }
+
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .header-container {
+        flex-direction: column; /* Name oben, Menü darunter */
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-direction: row !important; /* Erzwingt nebeneinander */
+        flex-wrap: nowrap !important;   /* Kein Umbruch erlaubt */
+        justify-content: center;
+        width: 100%;
+        gap: 8px; /* Kleiner Abstand zwischen den Punkten */
+    }
+
+    .nav-links li {
+        width: auto;
+    }
+
+    .nav-links a {
+        font-size: 0.75rem; /* Schrift kleiner, damit alles in eine Reihe passt */
+        padding: 5px 2px;
+        background: transparent; /* Kein Hintergrund am Handy nötig bei Reihe */
+        white-space: nowrap;
+    }
+
+    .dropdown {
+        position: absolute; /* Dropdown schwebt wieder */
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 180px;
+    }
+}
+
+/* 5. FOOTER & BUTTONS */
 footer {
     background: var(--secondary);
     color: white;
@@ -117,36 +159,14 @@ footer {
     width: 100%;
 }
 
-/* 5. MOBILE ANSICHT */
-@media (max-width: 768px) {
-    body {
-        padding-top: 130px;
-    }
-    header {
-        height: auto;
-        padding: 15px 0;
-    }
-    .header-container {
-        flex-direction: column;
-        gap: 12px;
-        justify-content: center;
-    }
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: 8px;
-    }
-    .nav-links a {
-        background: #f8f9fa;
-        text-align: center;
-        width: 100%;
-        padding: 10px;
-        border-radius: 4px;
-    }
-    .dropdown {
-        position: static;
-        width: 100%;
-        display: none;
-    }
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
 }
