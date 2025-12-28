@@ -2,59 +2,81 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kehrwoche | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
+
 <header>
-    <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
-    <ul class="nav-links">
-        <li><a href="index.html">Startseite</a></li>
-        <li>
-            <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown">
-                <li><a href="kehrwoche.html">Kehrwoche</a></li>
-                <li><a href="winterdienst.html">Winterdienst</a></li>
-                <li><a href="gartenpflege.html">Gartenpflege</a></li>
-                <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
-                <li><a href="bueroreinigung.html">Büroreinigung</a></li>
-                <li><a href="grundreinigung.html">Grundreinigung</a></li>
-                <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
-                <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
-                <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
-                <li><a href="entruempelung.html">Entrümpelung</a></li>
+    <div class="header-container">
+        <div class="logo-box">
+            <a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                        <li><a href="winterdienst.html">Winterdienst</a></li>
+                        <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                        <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                        <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                        <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                        <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                        <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                        <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                        <li><a href="entruempelung.html">Entrümpelung</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
             </ul>
-        </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-    </ul>
+        </nav>
+    </div>
 </header>
-<main class="section-padding">
-    <div style="display: flex; gap: 50px; flex-wrap: wrap;">
-        <div style="flex: 2; min-width: 300px;">
-            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;"><i class="fas fa-broom"></i> Kehrwoche & Hausreinigung</h1>
-            <p style="font-size: 1.1rem; margin-bottom: 30px;">Ein gepflegtes Treppenhaus ist die Visitenkarte jeder Immobilie. Wir übernehmen für Sie die fachgerechte Kehrwoche, reinigen Flure, Briefkastenanlagen und die Gemeinschaftsbereiche gründlich und zuverlässig.</p>
-            <div style="background: #eef4f9; padding: 20px; border-radius: 10px;">
-                <h4>Unsere Leistungen:</h4>
-                <ul style="margin-top: 10px; list-style: none;">
-                    <li><i class="fas fa-check" style="color: green;"></i> Treppenhausreinigung</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Reinigung der Außenwege & Hofbereiche</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Mülldienst & Tonnenbereitstellung</li>
+
+<main>
+    <section style="background: #fff; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
+            <img src="image/kehrwoche.png" alt="Reinico Kehrwoche Banner" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div style="max-width: 1000px; margin: 0 auto;">
+            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; text-align: center;">
+                <i class="fas fa-broom"></i> Kehrwoche & Treppenhausreinigung
+            </h1>
+            
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; text-align: center;">
+                Ein sauberes Treppenhaus ist die Visitenkarte Ihrer Immobilie. Wir übernehmen die gründliche Reinigung nach festen Plänen oder individuellem Bedarf – damit Sie sich um nichts kümmern müssen.
+            </p>
+
+            <div style="background: #f4f7fa; padding: 30px; border-radius: 10px; border-left: 5px solid var(--primary);">
+                <h4 style="margin-bottom: 15px;">Unsere Kehrwochen-Leistungen:</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Feuchtes Wischen der Treppenstufen & Flure</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Reinigung der Handläufe & Geländer</li>
+                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Spinnwebentfernung & Briefkastenreinigung</li>
+                    <li><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Reinigung der Hauseingangstüren</li>
                 </ul>
             </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="kontakt.html" class="btn-primary">KOSTENLOSES ANGEBOT ANFORDERN</a>
+            </div>
         </div>
-        <div style="flex: 1; min-width: 300px; background: #f4f7fa; padding: 30px; border-radius: 15px; height: fit-content;">
-            <h3>Anfrage Kehrwoche</h3>
-            <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
-                <input type="text" placeholder="Name" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <input type="email" placeholder="E-Mail" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <textarea placeholder="Wie viele Wohneinheiten?" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px; height:100px;"></textarea>
-                <button class="btn-primary" style="width:100%;">ANGEBOT ERHALTEN</button>
-            </form>
-        </div>
-    </div>
+    </section>
 </main>
-<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
+
+<footer>
+    <p>&copy; 2026 Reinico Gebäudereinigung | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum & Datenschutz</a></p>
+</footer>
+
 </body>
 </html>
