@@ -21,7 +21,7 @@ html, body {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 80px; /* Platz für den fixierten Header */
 }
 
 /* 2. HEADER & NAVIGATION */
@@ -41,10 +41,14 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    justify-content: flex-end; /* Schiebt das Menü nach ganz rechts, da kein Logo da ist */
+    /* justify-content: flex-end schiebt alles nach RECHTS */
+    justify-content: flex-end; 
     align-items: center;
     padding: 0 20px;
 }
+
+/* Falls du doch ein unsichtbares Element links hättest, 
+   wäre space-between auch möglich, aber flex-end erzwingt die rechte Seite. */
 
 .nav-links {
     display: flex;
@@ -53,7 +57,7 @@ header {
 }
 
 .has-dropdown {
-    position: relative;
+    position: relative; /* Wichtig für die Position des Untermenüs */
 }
 
 .nav-links a {
@@ -74,7 +78,7 @@ header {
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0; /* Dropdown richtet sich am rechten Rand des Links aus */
+    right: 0; /* Richtet das Dropdown bündig an der rechten Kante aus */
     background: var(--white);
     display: none;
     list-style: none;
@@ -94,6 +98,7 @@ header {
     font-weight: normal;
     font-size: 0.9rem;
     border-bottom: 1px solid #f1f1f1;
+    text-align: left;
 }
 
 .dropdown li:last-child a {
@@ -116,6 +121,7 @@ header {
     display: inline-block;
     font-weight: bold;
     margin-top: 20px;
+    border: none;
 }
 
 /* 5. FOOTER */
@@ -130,7 +136,7 @@ footer {
 /* 6. MOBILE OPTIMIERUNG */
 @media (max-width: 768px) {
     body {
-        padding-top: 100px;
+        padding-top: 140px; /* Platz für die untereinander stehenden Links */
     }
 
     header {
@@ -139,7 +145,7 @@ footer {
     }
 
     .header-container {
-        justify-content: center; /* Zentriert das Menü auf dem Handy */
+        justify-content: center; /* Auf dem Handy sieht zentriert meist besser aus */
     }
 
     .nav-links {
@@ -149,16 +155,19 @@ footer {
         gap: 8px;
     }
 
+    .nav-links li {
+        width: 100%;
+    }
+
     .nav-links a {
         background: #f8f9fa;
-        width: 100%;
         text-align: center;
         border-radius: 4px;
         padding: 10px;
     }
 
     .dropdown {
-        position: static;
+        position: static; /* Schiebt auf Mobile den Inhalt nach unten */
         width: 100%;
         box-shadow: none;
         display: none;
