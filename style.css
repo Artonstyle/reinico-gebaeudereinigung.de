@@ -1,4 +1,4 @@
-/* 1. GRUNDLAGEN & FARBEN */
+/* 1. GRUNDLAGEN */
 :root {
     --primary: #0056b3;
     --secondary: #2c3e50;
@@ -20,10 +20,10 @@ html, body {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 80px; /* Platz für fixierten Header */
 }
 
-/* 2. HEADER & NAVIGATION */
+/* 2. HEADER - Name LINKS, Menü RECHTS */
 header {
     position: fixed;
     top: 0;
@@ -40,20 +40,19 @@ header {
     margin: 0 auto;
     height: 100%;
     display: flex;
-    /* Sorgt für: Text LINKS, Menü RECHTS */
+    /* Dies ist der wichtigste Befehl für die Trennung */
     justify-content: space-between; 
     align-items: center;
     padding: 0 20px;
 }
 
-/* TEXT-LOGO LINKS (Kein Bild) */
+/* NAME LINKS */
 .logo {
     text-decoration: none;
     color: var(--primary);
     font-weight: bold;
     font-size: 1.3rem;
-    display: flex;
-    align-items: center;
+    white-space: nowrap;
 }
 
 .logo span {
@@ -83,15 +82,11 @@ header {
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
-
-/* 3. DROPDOWN MENÜ */
+/* 3. DROPDOWN (Rechtsbündig unter dem Menüpunkt) */
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0; /* Richtet das Dropdown rechtsbündig aus */
+    right: 0; /* Richtet das Dropdown an der rechten Kante des Links aus */
     background: var(--white);
     display: none;
     list-style: none;
@@ -109,35 +104,11 @@ header {
 .dropdown li a {
     padding: 10px 20px;
     font-weight: normal;
-    font-size: 0.9rem;
     border-bottom: 1px solid #f1f1f1;
     text-align: left;
 }
 
-.dropdown li:last-child a {
-    border-bottom: none;
-}
-
-/* 4. CONTENT & BUTTONS */
-.section-padding {
-    padding: 60px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.btn-primary {
-    background: var(--primary);
-    color: white;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    font-weight: bold;
-    margin-top: 20px;
-    border: none;
-}
-
-/* 5. FOOTER (2026) */
+/* 4. FOOTER (2026) */
 footer {
     background: var(--secondary);
     color: white;
@@ -146,30 +117,26 @@ footer {
     width: 100%;
 }
 
-/* 6. MOBILE OPTIMIERUNG */
+/* 5. MOBILE ANSICHT */
 @media (max-width: 768px) {
     body {
         padding-top: 130px;
     }
-
     header {
         height: auto;
         padding: 15px 0;
     }
-
     .header-container {
         flex-direction: column;
         gap: 12px;
         justify-content: center;
     }
-
     .nav-links {
         flex-direction: column;
         align-items: center;
         width: 100%;
         gap: 8px;
     }
-
     .nav-links a {
         background: #f8f9fa;
         text-align: center;
@@ -177,16 +144,9 @@ footer {
         padding: 10px;
         border-radius: 4px;
     }
-
     .dropdown {
         position: static;
         width: 100%;
-        box-shadow: none;
         display: none;
-        background: #f1f1f1;
-    }
-
-    .has-dropdown:hover .dropdown {
-        display: block;
     }
 }
