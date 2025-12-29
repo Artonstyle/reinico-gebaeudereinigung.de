@@ -7,17 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        .hero-img { width: 100%; height: auto; display: block; border-bottom: 5px solid #3b5998; }
-        .content-area { max-width: 1000px; margin: 0 auto; padding: 50px 20px; line-height: 1.8; color: #333; }
-        h1.main-title { color: #3b5998; font-size: clamp(1.8rem, 8vw, 2.8rem); margin-bottom: 25px; }
-        .intro-text { font-size: 1.2rem; color: #555; margin-bottom: 30px; }
-        .service-list-simple { list-style: none; padding: 0; margin: 30px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
-        .service-list-simple li { background: #f4f7fa; padding: 15px; border-radius: 8px; font-size: 1.05rem; display: flex; align-items: center; border-left: 4px solid #3b5998; }
-        .service-list-simple i { color: #3b5998; margin-right: 15px; font-size: 1.2rem; }
-        .cta-box { background: #3b5998; color: white; padding: 40px; border-radius: 15px; text-align: center; margin-top: 40px; }
-        .cta-box h2 { margin-bottom: 15px; }
-        .btn-white { background: white; color: #3b5998; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block; transition: 0.3s; }
-        .btn-white:hover { background: #f0f0f0; transform: scale(1.05); }
+        .hero-img { width: 100%; height: auto; display: block; }
+        .content-area { max-width: 1000px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #333; }
+        h1.main-title { color: #3b5998; font-size: clamp(1.6rem, 7vw, 2.5rem); margin-bottom: 20px; }
+        .service-list-simple { list-style: none; padding: 0; margin: 20px 0; }
+        .service-list-simple li { margin-bottom: 10px; font-size: 1.1rem; display: flex; align-items: center; }
+        .service-list-simple i { color: #3b5998; margin-right: 15px; width: 20px; }
     </style>
 </head>
 <body>
@@ -55,30 +50,19 @@
 </header>
 
 <main>
-    <img src="image/büroreinigung.jpeg" alt="Professionelle Büroreinigung Reinico" class="hero-img">
-
+    <img src="image/büroreinigung.jpeg" alt="Büroreinigung Reinico" class="hero-img">
     <section class="content-area">
         <h1 class="main-title">Professionelle Büroreinigung</h1>
-        <p class="intro-text">
-            Ein sauberes Arbeitsumfeld ist die Basis für motivierte Mitarbeiter und einen professionellen Eindruck bei Ihren Kunden. Wir sorgen diskret und zuverlässig für strahlende Büroräume in ganz Baden-Württemberg.
-        </p>
-        
-        <h2 style="color: #3b5998; margin-top: 40px;">Unsere Leistungen für Ihr Büro:</h2>
+        <p>Ein sauberes Arbeitsumfeld ist die Basis für motivierte Mitarbeiter und einen professionellen Eindruck bei Ihren Kunden. Wir sorgen diskret und zuverlässig für strahlende Büroräume in ganz Baden-Württemberg.</p>
         <ul class="service-list-simple">
-            <li><i class="fas fa-desktop"></i> Reinigung der Arbeitsplätze & IT-Equipment</li>
-            <li><i class="fas fa-trash-alt"></i> Leerung von Papierkörben & Mülltrennung</li>
-            <li><i class="fas fa-soap"></i> Hygienische Reinigung der Sanitäranlagen</li>
-            <li><i class="fas fa-coffee"></i> Reinigung der Teeküche & Aufenthaltsräume</li>
-            <li><i class="fas fa-broom"></i> Staubsaugen & feuchtes Wischen aller Böden</li>
-            <li><i class="fas fa-fingerprint"></i> Entfernung von Griffspuren an Türen & Glas</li>
+            <li><i class="fas fa-check"></i> Reinigung der Arbeitsplätze und Schreibtische</li>
+            <li><i class="fas fa-check"></i> Staubsaugen und Bodenreinigung</li>
+            <li><i class="fas fa-check"></i> Hygienische Reinigung der Sanitäranlagen</li>
+            <li><i class="fas fa-check"></i> Leerung der Mülleimer und Mülltrennung</li>
+            <li><i class="fas fa-check"></i> Reinigung der Teeküche und Aufenthaltsräume</li>
+            <li><i class="fas fa-check"></i> Staubwischen auf Regalen und Oberflächen</li>
         </ul>
-
-        <div class="cta-box">
-            <h2>Konzentrieren Sie sich auf Ihr Business</h2>
-            <p>Wir kümmern uns um den Rest. Flexibel, auch außerhalb Ihrer Geschäftszeiten.</p>
-            <br>
-            <a href="kontakt.html" class="btn-white">Unverbindliches Angebot anfordern</a>
-        </div>
+        <a href="kontakt.html" class="btn-primary" style="margin-top: 20px; display: inline-block; text-decoration: none;">Jetzt Angebot anfordern</a>
     </section>
 </main>
 
