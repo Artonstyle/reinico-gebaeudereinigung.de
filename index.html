@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinico Gebäudereinigung | Startseite</title>
+    <title>Reinico Gebäudereinigung | Professionelle Reinigung & Service</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
@@ -11,15 +11,15 @@
 
 <header>
     <div class="header-container">
-        <a href="index.html" class="logo">
-            Reinico <span>Gebäudereinigung</span>
-        </a>
+        <div class="logo-box">
+            <a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a>
+        </div>
         
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Startseite</a></li>
                 <li class="has-dropdown">
-                    <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <a href="#">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="kehrwoche.html">Kehrwoche</a></li>
                         <li><a href="winterdienst.html">Winterdienst</a></li>
@@ -41,46 +41,53 @@
 </header>
 
 <main>
-    <section class="hero-section" style="background: #fff; padding: 40px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <img src="image/reinico-logo.png" alt="Reinico Logo Banner" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            <h1 style="margin-top: 30px; color: var(--primary); font-size: 2.5rem;">Ihre Experten für Sauberkeit</h1>
-            <p style="font-size: 1.2rem; color: var(--secondary); margin-bottom: 25px;">Professionelle Gebäudereinigung & Service im Jahr 2026</p>
-            <a href="kontakt.html" class="btn-primary">JETZT ANGEBOT ANFORDERN</a>
+    <section style="background: #fff; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
+            <img src="image/reinico-logo.png" alt="Reinico Gebäudereinigung Logo" 
+                 style="width: 100%; max-width: 800px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         </div>
     </section>
 
-    <section class="section-padding" style="background-color: var(--light-bg);">
-        <h2 style="text-align: center; margin-bottom: 40px;">Unsere Expertise</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            
-            <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <i class="fas fa-snowflake" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                <h3>Winterdienst</h3>
-                <p>Zuverlässige Räumung und Streuung bei Schnee und Eis.</p>
-                <a href="winterdienst.html" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; margin-top: 15px;">Mehr erfahren →</a>
-            </div>
+    <section class="section-padding" style="text-align: center;">
+        <div style="max-width: 850px; margin: 0 auto;">
+            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;">Ihr Partner für glänzende Ergebnisse</h1>
+            <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 35px;">
+                Reinico Gebäudereinigung steht für höchste Qualität, Zuverlässigkeit und einen erstklassigen Service. Ob private Haushalte oder gewerbliche Objekte – wir sorgen für Sauberkeit und Werterhalt Ihrer Immobilie. Entdecken Sie unser breites Spektrum an Dienstleistungen.
+            </p>
+            <a href="kontakt.html" class="btn-primary" style="padding: 18px 35px; font-size: 1.1rem; text-transform: uppercase; text-decoration: none; display: inline-block;">Jetzt Angebot anfordern</a>
+        </div>
+    </section>
 
-            <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <i class="fas fa-broom" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                <h3>Kehrwoche</h3>
-                <p>Gründliche Reinigung von Treppenhäusern und Außenanlagen.</p>
-                <a href="kehrwoche.html" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; margin-top: 15px;">Mehr erfahren →</a>
-            </div>
+    <section style="background: #f4f7fa; padding: 60px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary);">Unsere Kernkompetenzen</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                
+                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <i class="fas fa-building" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Gebäudereinigung</h3>
+                    <p>Unterhalts- und Grundreinigung für höchste hygienische Ansprüche.</p>
+                </div>
 
-            <div style="background: white; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <i class="fas fa-leaf" style="font-size: 3rem; color: var(--primary); margin-bottom: 20px;"></i>
-                <h3>Gartenpflege</h3>
-                <p>Wir halten Ihre Grünanlagen das ganze Jahr über in Schuss.</p>
-                <a href="gartenpflege.html" style="color: var(--primary); font-weight: bold; text-decoration: none; display: block; margin-top: 15px;">Mehr erfahren →</a>
-            </div>
+                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <i class="fas fa-broom" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Kehrwoche</h3>
+                    <p>Ein gepflegtes Treppenhaus ist die Visitenkarte Ihres Hauses.</p>
+                </div>
 
+                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                    <i class="fas fa-tools" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Hausmeisterservice</h3>
+                    <p>Kompetente Betreuung und Instandhaltung Ihrer gesamten Anlage.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2026 Reinico Gebäudereinigung | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum & Datenschutz</a></p>
+    <p>&copy; Reinico Gebäudereinigung | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum & Datenschutz</a></p>
 </footer>
 
 </body>
