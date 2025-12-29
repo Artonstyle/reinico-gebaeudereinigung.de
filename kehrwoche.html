@@ -6,6 +6,22 @@
     <title>Kehrwoche | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        .hero-img { width: 100%; max-height: 500px; object-fit: cover; display: block; }
+        .content-area { max-width: 1000px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #333; }
+        .service-list-simple { list-style: none; padding: 0; margin: 20px 0; }
+        .service-list-simple li { margin-bottom: 10px; font-size: 1.1rem; }
+        .service-list-simple i { color: #3b5998; margin-right: 10px; }
+        
+        /* Kontaktformular Styling */
+        .contact-form-section { background: #f4f7fa; padding: 60px 20px; }
+        .contact-form { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+        .submit-btn { background: #3b5998; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 1.1rem; width: 100%; transition: background 0.3s; }
+        .submit-btn:hover { background: #2a4373; }
+    </style>
 </head>
 <body>
 
@@ -14,12 +30,11 @@
         <div class="logo-box">
             <a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a>
         </div>
-        
         <nav>
             <ul class="nav-links">
                 <li><a href="index.html">Startseite</a></li>
                 <li class="has-dropdown">
-                    <a href="#">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="active">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown">
                         <li><a href="kehrwoche.html">Kehrwoche</a></li>
                         <li><a href="winterdienst.html">Winterdienst</a></li>
@@ -41,36 +56,52 @@
 </header>
 
 <main>
-    <section style="background: #fff; padding: 20px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
-            <img src="image/kehrwoche.jpg" alt="Reinico Kehrwoche" style="width: 100%; max-height: 450px; object-fit: cover; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-        </div>
+    <img src="image/kehrwoche.png" alt="Kehrwoche Reinico" class="hero-img">
+
+    <section class="content-area">
+        <h1 style="color: #3b5998; font-size: 2.5rem; margin-bottom: 20px;">Kehrwoche & Treppenhausreinigung</h1>
+        <p>
+            Ein gepflegtes Treppenhaus ist die Visitenkarte eines jeden Hauses. Die Reinico Gebäudereinigung übernimmt für Sie die fachmännische Durchführung der Kehrwoche. Wir sorgen dafür, dass sich Mieter und Besucher in Ihrem Objekt von Anfang an wohlfühlen.
+        </p>
+        
+        <h2 style="margin-top: 30px;">Was wir für Sie tun:</h2>
+        <ul class="service-list-simple">
+            <li><i class="fas fa-check"></i> Gründliches Fegen und Wischen des Treppenhauses</li>
+            <li><i class="fas fa-check"></i> Reinigung der Hauseingangstüren und Briefkastenanlagen</li>
+            <li><i class="fas fa-check"></i> Reinigung von Kellergängen und Gemeinschaftsräumen</li>
+            <li><i class="fas fa-check"></i> Kehren der Gehwege und Außenanlagen</li>
+            <li><i class="fas fa-check"></i> Reinigung der Fenster im Treppenhaus (nach Absprache)</li>
+            <li><i class="fas fa-check"></i> Abfall- und Laubentfernung im Außenbereich</li>
+        </ul>
+        <p>
+            Ob wöchentliche Reinigung oder individuelle Intervalle – wir passen unseren Service flexibel an die Anforderungen Ihres Objekts an. Zuverlässigkeit und Gründlichkeit stehen dabei an oberster Stelle.
+        </p>
     </section>
 
-    <section class="section-padding">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px; text-align: center;">
-                <i class="fas fa-broom"></i> Professionelle Kehrwoche
-            </h1>
-            
-            <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 30px; text-align: center;">
-                Ein sauberes Treppenhaus sorgt für einen guten ersten Eindruck. Wir übernehmen die Kehrwoche für Sie – zuverlässig, pünktlich und gründlich im Jahr 2026.
-            </p>
-
-            <div style="background: #f4f7fa; padding: 30px; border-radius: 10px; border-left: 5px solid var(--primary); margin-bottom: 40px;">
-                <h4 style="margin-bottom: 15px;">Unser Service umfasst:</h4>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Treppenhausreinigung (Fegen & Wischen)</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Reinigung von Keller- und Gemeinschaftsräumen</li>
-                    <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Säuberung der Außenbereiche und Zuwege</li>
-                    <li><i class="fas fa-check" style="color: #28a745; margin-right: 10px;"></i> Fensterreinigung im Treppenhaus</li>
-                </ul>
-            </div>
-
-            <div style="text-align: center;">
-                <a href="kontakt.html" class="btn-primary">JETZT ANGEBOT ANFORDERN</a>
-            </div>
+    <section class="contact-form-section">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="color: #3b5998;">Angebot für Kehrwoche anfordern</h2>
+            <p>Senden Sie uns Details zu Ihrem Objekt für ein unverbindliches Preisangebot.</p>
         </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name / Hausverwaltung</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ihre Nummer">
+            </div>
+            <div class="form-group">
+                <label for="message">Anzahl der Stockwerke / Mieteinheiten</label>
+                <textarea id="message" name="message" rows="5" placeholder="Bitte beschreiben Sie kurz den Umfang..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Anfrage absenden</button>
+        </form>
     </section>
 </main>
 
