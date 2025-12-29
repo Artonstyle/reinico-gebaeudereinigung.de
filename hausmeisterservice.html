@@ -6,6 +6,65 @@
     <title>Hausmeisterservice | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        /* FIX: Bild wird am PC komplett angezeigt */
+        .hero-img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+        
+        .content-area { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            line-height: 1.8; 
+            color: #333; 
+        }
+        
+        h1.main-title { 
+            color: #3b5998; 
+            font-size: clamp(1.6rem, 7vw, 2.5rem); 
+            margin-bottom: 20px; 
+            line-height: 1.2;
+        }
+
+        .service-list-simple { list-style: none; padding: 0; margin: 20px 0; }
+        .service-list-simple li { margin-bottom: 10px; font-size: 1.1rem; display: flex; align-items: center; }
+        .service-list-simple i { color: #3b5998; margin-right: 15px; width: 20px; }
+        
+        .contact-form-section { background: #f4f7fa; padding: 60px 20px; }
+        .contact-form { 
+            max-width: 600px; 
+            margin: 0 auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1); 
+        }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            font-size: 1rem; 
+            box-sizing: border-box; 
+        }
+        .submit-btn { 
+            background: #3b5998; 
+            color: white; 
+            border: none; 
+            padding: 15px 30px; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 1.1rem; 
+            width: 100%; 
+            transition: background 0.3s; 
+        }
+        .submit-btn:hover { background: #2a4373; }
+    </style>
 </head>
 <body>
 
@@ -14,76 +73,75 @@
         <div class="logo-box">
             <a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a>
         </div>
-        
         <nav>
             <ul class="nav-links">
-    <li><a href="index.html">Startseite</a></li>
-    <li class="has-dropdown">
-        <a href="#">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown">
-            <li><a href="kehrwoche.html">Kehrwoche</a></li>
-            <li><a href="winterdienst.html">Winterdienst</a></li>
-            <li><a href="praxisreinigung.html">Praxisreinigung</a></li>
-            <li><a href="parkplatzreinigung.html">Parkplatzreinigung</a></li>
-            <li><a href="gartenpflege.html">Gartenpflege</a></li>
-            <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
-            <li><a href="bueroreinigung.html">Büroreinigung</a></li>
-            <li><a href="grundreinigung.html">Grundreinigung</a></li>
-            <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
-            <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
-            <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
-            <li><a href="entruempelung.html">Entrümpelung</a></li>
-        </ul>
-    </li>
-    <li><a href="kontakt.html">Kontakt</a></li>
-    <li><a href="jobs.html">Jobs</a></li>
-</ul>
+                <li><a href="index.html">Startseite</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="active">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                        <li><a href="winterdienst.html">Winterdienst</a></li>
+                        <li><a href="praxisreinigung.html">Praxisreinigung</a></li>
+                        <li><a href="parkplatzreinigung.html">Parkplatzreinigung</a></li>
+                        <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                        <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                        <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                        <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                        <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                        <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                        <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                        <li><a href="entruempelung.html">Entrümpelung</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+            </ul>
         </nav>
     </div>
 </header>
 
 <main>
-    <section style="background: #fff; padding: 20px 0;">
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
-            <img src="image/hausmeisterservice.png" alt="Reinico Hausmeisterservice" 
-                 style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block;">
-        </div>
+    <img src="image/hausmeisterservice.png" alt="Hausmeisterservice Reinico" class="hero-img">
+
+    <section class="content-area">
+        <h1 class="main-title">Zuverlässiger Hausmeisterservice</h1>
+        
+        <p>
+            Ein funktionierendes Gebäude benötigt ständige Aufmerksamkeit. Unser Hausmeisterservice sorgt dafür, dass Ihre Immobilie technisch einwandfrei und optisch in bestem Zustand bleibt. Wir sind Ihr Auge und Ohr vor Ort und kümmern uns schnell um alle anfallenden Aufgaben.
+        </p>
+        
+        <h2 style="margin-top: 30px; color: #3b5998;">Unsere Leistungen im Überblick:</h2>
+        <ul class="service-list-simple">
+            <li><i class="fas fa-check"></i> Regelmäßige Objektkontrolle und Begehung</li>
+            <li><i class="fas fa-check"></i> Überwachung der Haustechnik (Heizung, Licht, Aufzug)</li>
+            <li><i class="fas fa-check"></i> Durchführung kleinerer Reparaturen</li>
+            <li><i class="fas fa-check"></i> Überwachung und Koordination von Handwerkern</li>
+            <li><i class="fas fa-check"></i> Mülltonnenservice (Bereitstellung zu den Abfuhrterminen)</li>
+            <li><i class="fas fa-check"></i> Ansprechpartner für Mieter und Eigentümer</li>
+            <li><i class="fas fa-check"></i> Notdienst bei Havarien oder Störungen</li>
+        </ul>
     </section>
 
-    <section class="section-padding">
-        <div style="max-width: 850px; margin: 0 auto;">
-            
-            <div style="text-align: center; margin-bottom: 50px; line-height: 1.8;">
-                <h1 style="color: var(--primary); margin-bottom: 25px;">Zuverlässiger Hausmeisterservice</h1>
-                <p style="font-size: 1.15rem; color: #333; background: #f9f9f9; padding: 30px; border-radius: 10px; border-top: 4px solid var(--primary);">
-                    Ein funktionierendes Gebäude benötigt ständige Aufmerksamkeit. Unser Hausmeisterservice übernimmt die technische Kontrolle, kleine Instandsetzungen und sorgt für Ordnung in Ihrer gesamten Anlage. Von der Überwachung der Haustechnik bis hin zur Koordination von Handwerkern – wir sind im Jahr 2026 Ihr Auge und Ohr vor Ort. Mit Reinico wissen Sie Ihre Immobilie in kompetenten Händen.
-                </p>
-            </div>
-
-            <div style="background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
-                <h2 style="color: var(--primary); margin-bottom: 25px; font-size: 1.8rem; text-align: left;">Hausmeister-Anfrage</h2>
-                
-                <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="Name" placeholder="Ihr Name / Hausverwaltung" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="email" name="Email" placeholder="E-Mail Adresse" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <input type="text" name="Ort" placeholder="Objektstandort" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
-                    </div>
-                    <div style="margin-bottom: 25px;">
-                        <textarea name="Aufgaben" placeholder="Welche Aufgaben stehen an? (z.B. Technische Kontrolle, Mülltonnendienst, Reparaturen?)" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; min-height: 120px; font-family: sans-serif;"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn-primary" style="width: 100%; padding: 18px; border: none; cursor: pointer; text-transform: uppercase; font-weight: bold; background-color: var(--primary); color: white; border-radius: 8px;">
-                        Unverbindliches Gespräch anfordern
-                    </button>
-                </form>
-            </div>
-
+    <section class="contact-form-section">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="color: #3b5998;">Individuelle Betreuung anfragen</h2>
+            <p>Lassen Sie uns gemeinsam den Werterhalt Ihrer Immobilie sichern.</p>
         </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name / Hausverwaltung</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht / Objektbeschreibung</label>
+                <textarea id="message" name="message" rows="5" placeholder="Wie können wir Sie unterstützen?" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Anfrage senden</button>
+        </form>
     </section>
 </main>
 
