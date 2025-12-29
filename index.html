@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
+        /* Grund-Animationen und Kacheln */
         .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; text-decoration: none; color: inherit; display: block; }
         .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; }
 
@@ -18,6 +19,23 @@
         .faq-item.active .faq-answer { max-height: 300px; padding: 20px; border-top: 1px solid #e0e6ed; }
         .faq-icon { transition: transform 0.3s ease; color: #3b5998; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
+
+        /* Rezension Slider Styling */
+        .testimonial-slide {
+            display: none;
+            background: #f9f9f9;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            animation: slideIn 0.8s ease forwards;
+        }
+        .testimonial-slide.active { display: block; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
     </style>
 </head>
 <body>
@@ -142,15 +160,45 @@
 
     <section style="padding: 60px 0; text-align: center; background: #fff;">
         <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
-            <h2 style="color: var(--secondary); margin-bottom: 30px; font-size: 2rem;">Rezensionen</h2>
-            <div style="background: #f9f9f9; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eee;">
-                <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Anna Müller</p>
-                <div style="color: #f1c40f; margin-bottom: 15px; font-size: 1.2rem;">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <h2 style="color: var(--secondary); margin-bottom: 30px; font-size: 2rem;">Kundenstimmen</h2>
+            <div id="slider-wrapper" style="min-height: 250px;">
+                
+                <div class="testimonial-slide active">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Anna Müller</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Wir haben mit unterschiedlichen Reinigungsunternehmen Erfahrungen gemacht, jedoch waren wir mit keiner zufrieden. Seitdem Reinico Gebäudereinigung die Treppenhausreinigung und den Winterdienst übernommen hat, läuft alles in Takt. Auch die halbjährliche Fensterreinigung ist immer spitze!"</p>
                 </div>
-                <p style="font-style: italic; color: #444; line-height: 1.6;">
-                    "Wir haben mit unterschiedlichen Reinigungsunternehmen Erfahrungen gemacht, jedoch waren wir mit keiner zufrieden. Seitdem Reinico Gebäudereinigung die Treppenhausreinigung und den Winterdienst übernommen hat, läuft alles in Takt. Auch die halbjährliche Fensterreinigung, die ich in meiner Wohnung durchführen lasse, ist immer spitze!"
-                </p>
+
+                <div class="testimonial-slide">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Markus Weber</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Absolut zuverlässig im Bereich Hausmeisterservice. Die Anlage sieht immer gepflegt aus und Reparaturen werden sofort erledigt."</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Sabine Schneider</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Hervorragende Büroreinigung. Das Personal ist sehr diskret und die Qualität der Arbeit ist konstant hoch."</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Thomas Klein</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Der Winterdienst von Reinico ist Gold wert. Pünktlich schnee- und eisfreie Wege – eine Sorge weniger im Winter!"</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Julia Berger</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Sehr freundliches Team und top Gartenpflege. Mein Rasen sah noch nie so gut aus wie seit der Betreuung durch Reinico."</p>
+                </div>
+
+                <div class="testimonial-slide">
+                    <p style="font-weight: bold; font-size: 1.2rem; margin-bottom: 5px;">Christian Wagner</p>
+                    <div style="color: #f1c40f; margin-bottom: 15px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p style="font-style: italic; color: #444;">"Grundreinigung nach unserem Umzug wurde perfekt durchgeführt. Schnell, gründlich und ein faires Preis-Leistungs-Verhältnis."</p>
+                </div>
+
             </div>
         </div>
     </section>
@@ -161,35 +209,35 @@
             
             <div class="faq-item">
                 <button class="faq-question">Wie kann ich einen Termin buchen? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Sie können uns telefonisch, per E-Mail oder über unser Online-Buchungsformular kontaktieren. Wir melden uns schnellstmöglich zur Terminbestätigung.</div>
+                <div class="faq-answer">Sie können uns telefonisch, per E-Mail oder über unser Kontaktformular kontaktieren. Wir melden uns schnellstmöglich zurück.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Muss ich bei der Reinigung anwesend sein? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Nein, das ist nicht notwendig. Wenn Sie uns im Vorfeld Zugang zum Objekt ermöglichen, führen wir die Reinigung zuverlässig und selbstständig durch.</div>
+                <div class="faq-answer">Nein, das ist nicht notwendig. Wenn Sie uns im Vorfeld Zugang zum Objekt ermöglichen, erledigen wir alles zuverlässig in Ihrer Abwesenheit.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Bringen Ihre Mitarbeiter Reinigungsmittel und Geräte mit? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Ja, unsere Reinigungskräfte sind komplett ausgestattet mit umweltfreundlichen Reinigungsmitteln und professionellen Geräten. Auf Wunsch verwenden wir auch Ihre eigenen Produkte.</div>
+                <button class="faq-question">Bringen Ihre Mitarbeiter Reinigungsmittel mit? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Ja, unsere Reinigungskräfte sind komplett ausgestattet mit professionellen und umweltfreundlichen Reinigungsmitteln sowie Geräten.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Wie lange dauert eine Reinigung? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Die Dauer hängt vom Umfang der Reinigung und der Größe der Räumlichkeiten ab. Bei der Buchung geben wir Ihnen gerne eine Schätzung.</div>
+                <div class="faq-answer">Die Dauer hängt von der Größe und dem Verschmutzungsgrad ab. Wir geben Ihnen bei der Anfrage gerne eine zeitliche Einschätzung.</div>
             </div>
             <div class="faq-item">
                 <button class="faq-question">Was kostet eine Reinigung? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Unsere Preise richten sich nach dem Umfang der Dienstleistung. Gerne erstellen wir Ihnen ein individuelles und unverbindliches Angebot.</div>
+                <div class="faq-answer">Die Preise sind individuell. Gerne erstellen wir Ihnen ein unverbindliches Angebot, das genau auf Ihre Bedürfnisse zugeschnitten ist.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Was passiert, wenn ich mit der Reinigung nicht zufrieden bin? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Ihre Zufriedenheit ist uns sehr wichtig. Wenn etwas nicht zu Ihrer Zufriedenheit erledigt wurde, kommen wir kostenlos nachbessern.</div>
+                <button class="faq-question">Was passiert bei Unzufriedenheit? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Ihre Zufriedenheit steht an erster Stelle. Sollte etwas nicht passen, bessern wir umgehend und kostenlos für Sie nach.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Kann ich regelmäßige Reinigungen buchen? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Selbstverständlich. Wir bieten wöchentliche, zweiwöchentliche oder monatliche Reinigungspläne – ganz nach Ihren Bedürfnissen.</div>
+                <button class="faq-question">Kann ich regelmäßige Termine buchen? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Selbstverständlich. Wir bieten wöchentliche, zweiwöchentliche oder monatliche Pläne für Daueraufträge an.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-question">Bieten Sie auch Reinigungen außerhalb der Geschäftszeiten an? <i class="fas fa-chevron-down faq-icon"></i></button>
-                <div class="faq-answer">Ja, wir bieten flexible Einsatzzeiten – auch abends oder am Wochenende. Sprechen Sie uns gerne darauf an.</div>
+                <button class="faq-question">Reinigen Sie auch außerhalb der Geschäftszeiten? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Ja, wir sind flexibel und bieten Einsätze am Abend oder am Wochenende an, um Ihren Betriebsablauf nicht zu stören.</div>
             </div>
         </div>
     </section>
@@ -200,17 +248,17 @@
             <div style="flex: 1; min-width: 250px;">
                 <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">1</div>
                 <h3>Anfrage</h3>
-                <p>Rufen Sie uns an oder füllen Sie das Anfrageformular unten aus.</p>
+                <p>Kontaktieren Sie uns per Telefon oder über unser Online-Formular.</p>
             </div>
             <div style="flex: 1; min-width: 250px;">
                 <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">2</div>
                 <h3>Angebot erhalten</h3>
-                <p>Wir erstellen Ihnen ein Angebot, das Ihren Anforderungen entspricht.</p>
+                <p>Wir erstellen Ihnen ein faires und transparentes Angebot.</p>
             </div>
             <div style="flex: 1; min-width: 250px;">
                 <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">3</div>
                 <h3>Reinigung</h3>
-                <p>Mit Flexibilität & Fachwissen setzen wir Ihre Anforderungen um.</p>
+                <p>Unser Team führt die Arbeiten pünktlich und fachgerecht aus.</p>
             </div>
         </div>
         <p style="margin-top:40px; font-weight:bold; color: #3b5998; font-size: 1.3rem;">-> Ergebnis – blitzblank</p>
@@ -222,6 +270,7 @@
 </footer>
 
 <script>
+    // FAQ Logik
     document.querySelectorAll('.faq-question').forEach(button => {
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
@@ -231,6 +280,18 @@
             });
         });
     });
+
+    // Slider Logik
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial-slide');
+    
+    function showNextSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 5000); // Wechselt alle 5 Sekunden
 </script>
 
 </body>
