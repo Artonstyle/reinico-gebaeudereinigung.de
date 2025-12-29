@@ -2,61 +2,92 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hausmeisterservice | Reinico Gebäudereinigung</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 </head>
 <body>
+
 <header>
-    <a href="index.html" class="logo">Reinico<span>Gebäudereinigung</span></a>
-    <ul class="nav-links">
-        <li><a href="index.html">Startseite</a></li>
-        <li>
-            <a href="#">Unsere Dienstleistungen <i class="fas fa-chevron-down"></i></a>
-            <ul class="dropdown">
-                <li><a href="kehrwoche.html">Kehrwoche</a></li>
-                <li><a href="winterdienst.html">Winterdienst</a></li>
-                <li><a href="gartenpflege.html">Gartenpflege</a></li>
-                <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
-                <li><a href="bueroreinigung.html">Büroreinigung</a></li>
-                <li><a href="grundreinigung.html">Grundreinigung</a></li>
-                <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
-                <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
-                <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
-                <li><a href="entruempelung.html">Entrümpelung</a></li>
+    <div class="header-container">
+        <div class="logo-box">
+            <a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a>
+        </div>
+        
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li class="has-dropdown">
+                    <a href="#">Dienstleistungen <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="kehrwoche.html">Kehrwoche</a></li>
+                        <li><a href="winterdienst.html">Winterdienst</a></li>
+                        <li><a href="gartenpflege.html">Gartenpflege</a></li>
+                        <li><a href="fensterreinigung.html">Fensterreinigung</a></li>
+                        <li><a href="bueroreinigung.html">Büroreinigung</a></li>
+                        <li><a href="grundreinigung.html">Grundreinigung</a></li>
+                        <li><a href="unterhaltsreinigung.html">Unterhaltsreinigung</a></li>
+                        <li><a href="hausmeisterservice.html">Hausmeisterservice</a></li>
+                        <li><a href="teppichreinigung.html">Teppichreinigung</a></li>
+                        <li><a href="entruempelung.html">Entrümpelung</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
             </ul>
-        </li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-        <li><a href="jobs.html">Jobs</a></li>
-    </ul>
-</header>
-<main class="section-padding">
-    <div style="display: flex; gap: 50px; flex-wrap: wrap;">
-        <div style="flex: 2; min-width: 300px;">
-            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;"><i class="fas fa-tools"></i> Hausmeisterservice</h1>
-            <div style="width: 100%; height: 300px; background: #eee; border-radius: 15px; margin-bottom: 20px; overflow: hidden;">
-                <img src="https://images.unsplash.com/photo-1558444479-c8f027d8a5db?w=1200" style="width: 100%; height: 100%; object-fit: cover;">
-            </div>
-            <p style="font-size: 1.1rem; margin-bottom: 30px;">Der Rundum-Blick für Ihr Haus. Wir kümmern uns um die Haustechnik, kleine Reparaturen und sorgen für Ordnung im gesamten Objekt.</p>
-            <div style="background: #eef4f9; padding: 20px; border-radius: 10px;">
-                <h4>Unsere Leistungen:</h4>
-                <ul style="margin-top: 10px; list-style: none;">
-                    <li><i class="fas fa-check" style="color: green;"></i> Überprüfung der Haustechnik</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Durchführung von Kleinreparaturen</li>
-                    <li><i class="fas fa-check" style="color: green;"></i> Leuchtmittelaustausch & Kontrolle</li>
-                </ul>
-            </div>
-        </div>
-        <div style="flex: 1; min-width: 300px; background: #f4f7fa; padding: 30px; border-radius: 15px; height: fit-content;">
-            <h3>Anfrage Hausmeister</h3>
-            <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
-                <input type="text" placeholder="Name" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <input type="email" placeholder="E-Mail" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px;">
-                <textarea placeholder="Was können wir für Sie tun?" style="width:100%; padding:12px; margin: 10px 0; border:1px solid #ddd; border-radius: 5px; height:100px;"></textarea>
-                <button class="btn-primary" style="width:100%;">ANGEBOT ERHALTEN</button>
-            </form>
-        </div>
+        </nav>
     </div>
+</header>
+
+<main>
+    <section style="background: #fff; padding: 20px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
+            <img src="image/hausmeisterservice.png" alt="Reinico Hausmeisterservice" 
+                 style="width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: block;">
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div style="max-width: 850px; margin: 0 auto;">
+            
+            <div style="text-align: center; margin-bottom: 50px; line-height: 1.8;">
+                <h1 style="color: var(--primary); margin-bottom: 25px;">Zuverlässiger Hausmeisterservice</h1>
+                <p style="font-size: 1.15rem; color: #333; background: #f9f9f9; padding: 30px; border-radius: 10px; border-top: 4px solid var(--primary);">
+                    Ein funktionierendes Gebäude benötigt ständige Aufmerksamkeit. Unser Hausmeisterservice übernimmt die technische Kontrolle, kleine Instandsetzungen und sorgt für Ordnung in Ihrer gesamten Anlage. Von der Überwachung der Haustechnik bis hin zur Koordination von Handwerkern – wir sind im Jahr 2026 Ihr Auge und Ohr vor Ort. Mit Reinico wissen Sie Ihre Immobilie in kompetenten Händen.
+                </p>
+            </div>
+
+            <div style="background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border: 1px solid #eee;">
+                <h2 style="color: var(--primary); margin-bottom: 25px; font-size: 1.8rem; text-align: left;">Hausmeister-Anfrage</h2>
+                
+                <form action="mailto:info@reinico.de" method="post" enctype="text/plain">
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" name="Name" placeholder="Ihr Name / Hausverwaltung" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" name="Email" placeholder="E-Mail Adresse" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" name="Ort" placeholder="Objektstandort" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px;">
+                    </div>
+                    <div style="margin-bottom: 25px;">
+                        <textarea name="Aufgaben" placeholder="Welche Aufgaben stehen an? (z.B. Technische Kontrolle, Mülltonnendienst, Reparaturen?)" required style="width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; min-height: 120px; font-family: sans-serif;"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary" style="width: 100%; padding: 18px; border: none; cursor: pointer; text-transform: uppercase; font-weight: bold; background-color: var(--primary); color: white; border-radius: 8px;">
+                        Unverbindliches Gespräch anfordern
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
 </main>
-<footer><p>&copy; 2025 Reinico Gebäudereinigung</p></footer>
+
+<footer>
+    <p>&copy; 2026 Reinico Gebäudereinigung | <a href="impressum.html" style="color: white; text-decoration: none;">Impressum & Datenschutz</a></p>
+</footer>
+
 </body>
 </html>
