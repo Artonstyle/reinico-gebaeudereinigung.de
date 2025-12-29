@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
     <style>
-        .hero-sub { background: #f4f7fa; padding: 60px 20px; text-align: center; }
-        .content-section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; line-height: 1.8; color: #333; }
-        .service-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .service-list li { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-left: 5px solid #3b5998; }
-        .service-list i { color: #3b5998; margin-right: 10px; }
+        .winter-hero-img { width: 100%; max-height: 500px; object-fit: cover; display: block; }
+        .content-area { max-width: 1000px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #333; }
+        .service-list-simple { list-style: none; padding: 0; margin: 20px 0; }
+        .service-list-simple li { margin-bottom: 10px; font-size: 1.1rem; }
+        .service-list-simple i { color: #3b5998; margin-right: 10px; }
         
-        /* Styling für das Winterdienst-Bild */
-        .winter-img-container { text-align: center; margin: 40px 0; }
-        .winter-img { max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        /* Kontaktformular Styling */
+        .contact-form-section { background: #f4f7fa; padding: 60px 20px; }
+        .contact-form { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; }
+        .submit-btn { background: #3b5998; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 1.1rem; width: 100%; transition: background 0.3s; }
+        .submit-btn:hover { background: #2a4373; }
     </style>
 </head>
 <body>
@@ -51,39 +56,52 @@
 </header>
 
 <main>
-    <section class="hero-sub">
-        <i class="fas fa-snowflake" style="font-size: 4rem; color: #3b5998; margin-bottom: 20px;"></i>
-        <h1 style="color: #3b5998; font-size: 2.5rem;">Winterdienst</h1>
-        <p style="font-size: 1.2rem; max-width: 700px; margin: 20px auto;">Zuverlässige Sicherheit bei Eis und Schnee für Ihre Wege und Flächen.</p>
+    <img src="image/winterdienst.png" alt="Winterdienst Reinico" class="winter-hero-img">
+
+    <section class="content-area">
+        <h1 style="color: #3b5998; font-size: 2.5rem; margin-bottom: 20px;">Winterdienst</h1>
+        <p>
+            Wenn der erste Schnee fällt, sorgt die Reinico Gebäudereinigung für sichere Wege. Unser professioneller Winterdienst übernimmt für Sie die komplette Räum- und Streupflicht. Wir bedienen sowohl private Haushalte als auch gewerbliche Kunden in ganz Baden-Württemberg zuverlässig und pünktlich.
+        </p>
+        
+        <h2 style="margin-top: 30px;">Unsere Leistungen auf einen Blick:</h2>
+        <ul class="service-list-simple">
+            <li><i class="fas fa-check"></i> Schneeräumung von Gehwegen und Einfahrten</li>
+            <li><i class="fas fa-check"></i> Räumung großer Parkplatzflächen und Betriebshöfe</li>
+            <li><i class="fas fa-check"></i> Streudienst gegen Glätte (Salz, Splitt oder Sand)</li>
+            <li><i class="fas fa-check"></i> Tägliche Überwachung der Wetterlage</li>
+            <li><i class="fas fa-check"></i> Komplette Haftungsübernahme im Schadensfall</li>
+            <li><i class="fas fa-check"></i> Streugutbeseitigung nach der Wintersaison</li>
+        </ul>
+        <p>
+            Verlassen Sie sich auf unsere langjährige Erfahrung und modernste Ausrüstung. Wir garantieren Ihnen die Einhaltung aller gesetzlichen Vorschriften Ihrer Gemeinde.
+        </p>
     </section>
 
-    <section class="content-section">
-        <h2>Sicher durch den Winter</h2>
-        <p>
-            Wenn der erste Schnee fällt, sind wir bereits für Sie im Einsatz. Unser professioneller Winterdienst übernimmt die Räum- und Streupflicht für private Immobilien, Gewerbeflächen und öffentliche Wege. Wir arbeiten streng nach den gesetzlichen Bestimmungen der jeweiligen Kommunalsatzungen.
-        </p>
-
-        <div class="winter-img-container">
-            <img src="image/winterdienst.png" alt="Winterdienst im Einsatz" class="winter-img">
+    <section class="contact-form-section">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h2 style="color: #3b5998;">Jetzt Winterdienst anfragen</h2>
+            <p>Senden Sie uns eine Nachricht für ein unverbindliches Angebot.</p>
         </div>
-
-        <div style="margin-top: 40px;">
-            <h3>Unsere Leistungen im Winterdienst:</h3>
-            <ul class="service-list">
-                <li><i class="fas fa-check-circle"></i> Fachgerechte Schneeräumung</li>
-                <li><i class="fas fa-check-circle"></i> Räumung von Parkplätzen & Höfen</li>
-                <li><i class="fas fa-check-circle"></i> Streuen gegen Glätte (Salz/Splitt)</li>
-                <li><i class="fas fa-check-circle"></i> Überwachung der Wetterlage</li>
-                <li><i class="fas fa-check-circle"></i> Entfernung des Streuguts im Frühjahr</li>
-                <li><i class="fas fa-check-circle"></i> Volle Haftungsübernahme</li>
-            </ul>
-        </div>
-
-        <div style="background: #3b5998; color: white; padding: 40px; border-radius: 15px; margin-top: 50px; text-align: center;">
-            <h3>Überlassen Sie uns die Räumpflicht!</h3>
-            <p>Wir behalten das Wetter im Auge, damit Ihre Wege sicher begehbar bleiben.</p>
-            <a href="kontakt.html" style="background: white; color: #3b5998; padding: 15px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px;">Jetzt Angebot anfordern</a>
-        </div>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name / Firma</label>
+                <input type="text" id="name" name="name" placeholder="Ihr Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-Mail Adresse</label>
+                <input type="email" id="email" name="email" placeholder="ihre@email.de" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ihre Nummer">
+            </div>
+            <div class="form-group">
+                <label for="message">Nachricht / Objektgröße</label>
+                <textarea id="message" name="message" rows="5" placeholder="Beschreiben Sie kurz Ihr Objekt..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Anfrage absenden</button>
+        </form>
     </section>
 </main>
 
