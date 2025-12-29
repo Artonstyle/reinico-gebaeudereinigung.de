@@ -15,7 +15,7 @@
         .faq-item { background: #f4f7fa; margin-bottom: 10px; border-radius: 8px; overflow: hidden; border: 1px solid #e0e6ed; }
         .faq-question { padding: 20px; width: 100%; text-align: left; background: none; border: none; display: flex; justify-content: space-between; align-items: center; cursor: pointer; font-weight: bold; color: #3b5998; font-size: 1rem; }
         .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; background: #fff; color: #555; line-height: 1.6; }
-        .faq-item.active .faq-answer { max-height: 200px; padding: 20px; border-top: 1px solid #e0e6ed; }
+        .faq-item.active .faq-answer { max-height: 300px; padding: 20px; border-top: 1px solid #e0e6ed; }
         .faq-icon { transition: transform 0.3s ease; color: #3b5998; }
         .faq-item.active .faq-icon { transform: rotate(180deg); }
     </style>
@@ -65,16 +65,14 @@
             <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 35px;">
                 Reinico Gebäudereinigung steht für höchste Qualität, Zuverlässigkeit und einen erstklassigen Service. Ob private Haushalte oder gewerbliche Objekte – wir sorgen für Sauberkeit und Werterhalt Ihrer Immobilie. Entdecken Sie unser breites Spektrum an Dienstleistungen.
             </p>
-            <a href="kontakt.html" class="btn-primary" style="padding: 18px 35px; font-size: 1.1rem; text-transform: uppercase; text-decoration: none; display: inline-block; background-color: var(--primary); color: white; border-radius: 8px;">Jetzt Angebot anfordern</a>
+            <a href="kontakt.html" class="btn-primary" style="padding: 18px 35px; text-decoration: none; display: inline-block;">Jetzt Angebot anfordern</a>
         </div>
     </section>
 
     <section style="background: #f4f7fa; padding: 60px 0;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
             <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary); font-size: 2rem;">Unsere Dienstleistungen</h2>
-            
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                
                 <a href="kehrwoche.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-broom" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
@@ -82,39 +80,34 @@
                         <p style="font-size: 0.95rem; color: #666;">Unsere Kehrwoche-Dienstleistung sorgt für saubere und gepflegte Außenbereiche.</p>
                     </div>
                 </a>
-
                 <a href="winterdienst.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-snowflake" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Winterdienst</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Sicher durch den Winter: Wir halten Ihre Wege und Flächen schnee- und eisfrei.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Sicherheit für Gewerbe und Privatimmobilien in der kalten Jahreszeit.</p>
                     </div>
                 </a>
-
                 <a href="gartenpflege.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-seedling" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Gartenpflege</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Professionelles Rasenmähen, Rückschnitt und gründliche Unkrautentfernung.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Professionelles Rasenmähen, Rückschnitt und Unkrautentfernung.</p>
                     </div>
                 </a>
-
                 <a href="fensterreinigung.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-window-maximize" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Fensterreinigung</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Glasklare Ergebnisse für Ihre Fenster für ein helles Ambiente.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Glasklare Ergebnisse für ein frisches und einladendes Ambiente.</p>
                     </div>
                 </a>
-
                 <a href="bueroreinigung.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-laptop-house" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Büroreinigung</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Maßgeschneiderte Reinigungspläne, die sich flexibel anpassen.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Maßgeschneiderte Reinigungspläne für Ihre Arbeitsräume.</p>
                     </div>
                 </a>
-
                 <a href="grundreinigung.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-hand-sparkles" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
@@ -122,31 +115,27 @@
                         <p style="font-size: 0.95rem; color: #666;">Wir entfernen Schmutz & Staub aus allen Ecken – von Böden bis Fenster.</p>
                     </div>
                 </a>
-
                 <a href="unterhaltsreinigung.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-bucket" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Unterhaltsreinigung</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Regelmäßige Pflege Ihrer Räumlichkeiten für dauerhafte Sauberkeit.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Kontinuierliche Sauberkeit für ein gepflegtes Erscheinungsbild.</p>
                     </div>
                 </a>
-
                 <a href="hausmeisterservice.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-tools" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Hausmeisterservice</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Zuverlässiger Rundum-Service für Ordnung und kleine Reparaturen.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Zuverlässige Instandhaltung Ihrer gesamten Anlage.</p>
                     </div>
                 </a>
-
                 <a href="teppichreinigung.html" class="service-card">
                     <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
                         <i class="fas fa-vacuum" style="font-size: 3rem; color: #3b5998; margin-bottom: 20px;"></i>
                         <h3 style="margin-bottom: 10px; color: #3b5998;">Teppichreinigung</h3>
-                        <p style="font-size: 0.95rem; color: #666;">Tiefenreinigung Ihrer Teppichböden für Hygiene und frische Farben.</p>
+                        <p style="font-size: 0.95rem; color: #666;">Tiefgehende Sauberkeit und frische Farben für Ihre Böden.</p>
                     </div>
                 </a>
-
             </div>
         </div>
     </section>
@@ -174,18 +163,57 @@
                 <button class="faq-question">Wie kann ich einen Termin buchen? <i class="fas fa-chevron-down faq-icon"></i></button>
                 <div class="faq-answer">Sie können uns telefonisch, per E-Mail oder über unser Online-Buchungsformular kontaktieren. Wir melden uns schnellstmöglich zur Terminbestätigung.</div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question">Muss ich bei der Reinigung anwesend sein? <i class="fas fa-chevron-down faq-icon"></i></button>
                 <div class="faq-answer">Nein, das ist nicht notwendig. Wenn Sie uns im Vorfeld Zugang zum Objekt ermöglichen, führen wir die Reinigung zuverlässig und selbstständig durch.</div>
             </div>
-
             <div class="faq-item">
                 <button class="faq-question">Bringen Ihre Mitarbeiter Reinigungsmittel und Geräte mit? <i class="fas fa-chevron-down faq-icon"></i></button>
                 <div class="faq-answer">Ja, unsere Reinigungskräfte sind komplett ausgestattet mit umweltfreundlichen Reinigungsmitteln und professionellen Geräten. Auf Wunsch verwenden wir auch Ihre eigenen Produkte.</div>
             </div>
-            
+            <div class="faq-item">
+                <button class="faq-question">Wie lange dauert eine Reinigung? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Die Dauer hängt vom Umfang der Reinigung und der Größe der Räumlichkeiten ab. Bei der Buchung geben wir Ihnen gerne eine Schätzung.</div>
             </div>
+            <div class="faq-item">
+                <button class="faq-question">Was kostet eine Reinigung? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Unsere Preise richten sich nach dem Umfang der Dienstleistung. Gerne erstellen wir Ihnen ein individuelles und unverbindliches Angebot.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Was passiert, wenn ich mit der Reinigung nicht zufrieden bin? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Ihre Zufriedenheit ist uns sehr wichtig. Wenn etwas nicht zu Ihrer Zufriedenheit erledigt wurde, kommen wir kostenlos nachbessern.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Kann ich regelmäßige Reinigungen buchen? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Selbstverständlich. Wir bieten wöchentliche, zweiwöchentliche oder monatliche Reinigungspläne – ganz nach Ihren Bedürfnissen.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Bieten Sie auch Reinigungen außerhalb der Geschäftszeiten an? <i class="fas fa-chevron-down faq-icon"></i></button>
+                <div class="faq-answer">Ja, wir bieten flexible Einsatzzeiten – auch abends oder am Wochenende. Sprechen Sie uns gerne darauf an.</div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; background: #fff; text-align: center;">
+        <h2 style="color: var(--secondary); margin-bottom: 40px; font-size: 2rem;">3 Schritte – 1 Ergebnis</h2>
+        <div style="max-width: 900px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 30px;">
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">1</div>
+                <h3>Anfrage</h3>
+                <p>Rufen Sie uns an oder füllen Sie das Anfrageformular unten aus.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">2</div>
+                <h3>Angebot erhalten</h3>
+                <p>Wir erstellen Ihnen ein Angebot, das Ihren Anforderungen entspricht.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+                <div style="background:#3b5998; color:white; width:50px; height:50px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; margin: 0 auto 15px; font-size: 1.2rem;">3</div>
+                <h3>Reinigung</h3>
+                <p>Mit Flexibilität & Fachwissen setzen wir Ihre Anforderungen um.</p>
+            </div>
+        </div>
+        <p style="margin-top:40px; font-weight:bold; color: #3b5998; font-size: 1.3rem;">-> Ergebnis – blitzblank</p>
     </section>
 </main>
 
@@ -198,6 +226,9 @@
         button.addEventListener('click', () => {
             const faqItem = button.parentElement;
             faqItem.classList.toggle('active');
+            document.querySelectorAll('.faq-item').forEach(item => {
+                if (item !== faqItem) item.classList.remove('active');
+            });
         });
     });
 </script>
