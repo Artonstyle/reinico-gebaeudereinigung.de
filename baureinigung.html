@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baureinigung | Reinico Gebäudereinigung</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        .hero-img { width: 100%; height: auto; display: block; }
+        .content-area { max-width: 1000px; margin: 0 auto; padding: 40px 20px; line-height: 1.8; color: #333; }
+        h1.main-title { color: #3b5998; font-size: clamp(1.6rem, 7vw, 2.5rem); margin-bottom: 20px; line-height: 1.2; word-wrap: break-word; }
+        .service-list-simple { list-style: none; padding: 0; margin: 20px 0; }
+        .service-list-simple li { margin-bottom: 10px; font-size: 1.1rem; }
+        .service-list-simple i { color: #3b5998; margin-right: 10px; }
+        .contact-form-section { background: #f4f7fa; padding: 60px 20px; }
+        .contact-form { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; box-sizing: border-box; }
+        .submit-btn { background: #3b5998; color: white; border: none; padding: 15px 30px; border-radius: 5px; cursor: pointer; font-size: 1.1rem; width: 100%; transition: background 0.3s; }
+        .submit-btn:hover { background: #2a4373; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo-box"><a href="index.html" class="logo">Reinico <span>Gebäudereinigung</span></a></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main>
+    <img src="image/baureinigung.jpg" alt="Baureinigung Reinico" class="hero-img">
+    <section class="content-area">
+        <h1 class="main-title">Bau- & Bauendreinigung</h1>
+        <p>Nach dem Bau kommt der Glanz. Wir entfernen Bauschutt, Staub und Etikettenreste, damit Ihr Neubau oder Ihre Sanierung bezugsfertig ist.</p>
+        <ul class="service-list-simple">
+            <li><i class="fas fa-check"></i> Baugrobreinigung während der Bauphase</li>
+            <li><i class="fas fa-check"></i> Baufeinreinigung vor der Übergabe</li>
+            <li><i class="fas fa-check"></i> Entfernung von Farbspritzern und Zementschleier</li>
+        </ul>
+    </section>
+    <section class="contact-form-section">
+        <form class="contact-form">
+            <h2 style="text-align:center; color:#3b5998;">Jetzt Angebot anfordern</h2>
+            <div class="form-group"><label>Name</label><input type="text" required></div>
+            <div class="form-group"><label>E-Mail</label><input type="email" required></div>
+            <div class="form-group"><label>Nachricht</label><textarea rows="4" required></textarea></div>
+            <button type="submit" class="submit-btn">Anfrage senden</button>
+        </form>
+    </section>
+</main>
+<footer><p>&copy; 2026 Reinico Gebäudereinigung</p></footer>
+</body>
+</html>
