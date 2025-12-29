@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reinico Gebäudereinigung | Professionelle Reinigung & Service</title>
+    <title>Reinico Gebäudereinigung | Startseite</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        /* Kleiner Extra-Style für den Hover-Effekt der Kacheln */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+        }
+    </style>
 </head>
 <body>
 
@@ -43,44 +53,116 @@
 <main>
     <section style="background: #fff; padding: 20px 0;">
         <div style="max-width: 1200px; margin: 0 auto; text-align: center; padding: 0 15px;">
-            <img src="image/reinico-logo.png" alt="Reinico Gebäudereinigung Logo" 
+            <img src="image/reinico-logo.png" alt="Reinico Logo" 
                  style="width: 100%; max-width: 800px; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         </div>
     </section>
 
-    <section class="section-padding" style="text-align: center;">
-        <div style="max-width: 850px; margin: 0 auto;">
-            <h1 style="color: var(--primary); font-size: 2.5rem; margin-bottom: 20px;">Ihr Partner für glänzende Ergebnisse</h1>
-            <p style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 35px;">
-                Reinico Gebäudereinigung steht für höchste Qualität, Zuverlässigkeit und einen erstklassigen Service. Ob private Haushalte oder gewerbliche Objekte – wir sorgen für Sauberkeit und Werterhalt Ihrer Immobilie. Entdecken Sie unser breites Spektrum an Dienstleistungen.
+    <section style="padding: 40px 20px; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1 style="color: var(--primary); margin-bottom: 20px;">Ihr Partner für Sauberkeit & Werterhalt</h1>
+            <p style="font-size: 1.1rem; line-height: 1.6; color: #333;">
+                Willkommen bei Reinico Gebäudereinigung. Wir bieten Ihnen professionelle Dienstleistungen rund um Ihr Gebäude – zuverlässig, gründlich und termingerecht.
             </p>
-            <a href="kontakt.html" class="btn-primary" style="padding: 18px 35px; font-size: 1.1rem; text-transform: uppercase; text-decoration: none; display: inline-block;">Jetzt Angebot anfordern</a>
         </div>
     </section>
 
-    <section style="background: #f4f7fa; padding: 60px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary);">Unsere Kernkompetenzen</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+    <section style="background: #f4f7fa; padding: 60px 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="text-align: center; margin-bottom: 40px; color: var(--secondary); font-size: 2rem;">Unsere Dienstleistungen</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 
-                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <i class="fas fa-building" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">Gebäudereinigung</h3>
-                    <p>Unterhalts- und Grundreinigung für höchste hygienische Ansprüche.</p>
-                </div>
+                <a href="kehrwoche.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-broom" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Kehrwoche</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Unsere Kehrwoche-Dienstleistung sorgt für saubere und gepflegte Außenbereiche.</p>
+                    </div>
+                </a>
 
-                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <i class="fas fa-broom" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">Kehrwoche</h3>
-                    <p>Ein gepflegtes Treppenhaus ist die Visitenkarte Ihres Hauses.</p>
-                </div>
+                <a href="winterdienst.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-snowflake" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Winterdienst</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Sicher durch den Winter: Wir halten Ihre Wege und Flächen schnee- und eisfrei.</p>
+                    </div>
+                </a>
 
-                <div style="background: white; padding: 30px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                    <i class="fas fa-tools" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
-                    <h3 style="margin-bottom: 10px;">Hausmeisterservice</h3>
-                    <p>Kompetente Betreuung und Instandhaltung Ihrer gesamten Anlage.</p>
-                </div>
+                <a href="gartenpflege.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-seedling" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Gartenpflege</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Professionelles Rasenmähen, Rückschnitt von Sträuchern und Unkrautentfernung.</p>
+                    </div>
+                </a>
 
+                <a href="fensterreinigung.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-window-maximize" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Fensterreinigung</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Glasklare Ergebnisse für Ihre Fenster und Glasflächen für ein helles Ambiente.</p>
+                    </div>
+                </a>
+
+                <a href="bueroreinigung.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-laptop-house" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Büroreinigung</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Wir sorgen für Sauberkeit am Arbeitsplatz, damit Sie sich voll konzentrieren können.</p>
+                    </div>
+                </a>
+
+                <a href="grundreinigung.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-hand-sparkles" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Grundreinigung</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Intensive Reinigung bis ins Detail – wir entfernen auch hartnäckigen Schmutz.</p>
+                    </div>
+                </a>
+
+                <a href="unterhaltsreinigung.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-bucket" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Unterhaltsreinigung</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Regelmäßige Pflege Ihrer Räumlichkeiten für dauerhaftes Wohlbefinden.</p>
+                    </div>
+                </a>
+
+                <a href="hausmeisterservice.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-tools" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Hausmeisterservice</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Überwachung der Haustechnik, kleine Reparaturen und allgemeine Ordnung.</p>
+                    </div>
+                </a>
+
+                <a href="teppichreinigung.html" style="text-decoration: none; color: inherit;">
+                    <div class="service-card" style="background: white; padding: 40px 20px; border-radius: 12px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%;">
+                        <i class="fas fa-vacuum" style="font-size: 3.5rem; color: #3b5998; margin-bottom: 20px;"></i>
+                        <h3 style="margin-bottom: 15px; color: #3b5998;">Teppichreinigung</h3>
+                        <p style="font-size: 0.95rem; color: #666;">Tiefenreinigung Ihrer Teppichböden für Hygiene und frische Farben.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 60px 0; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 20px;">
+            <h2 style="color: var(--secondary); margin-bottom: 30px; font-size: 2rem;">Rezensionen</h2>
+            <div style="background: #f9f9f9; padding: 40px; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                <div style="margin-bottom: 15px;">
+                    <span style="background: #3b5998; color: white; width: 50px; height: 50px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 1.5rem; font-weight: bold;">Ö</span>
+                </div>
+                <p style="font-weight: bold; margin-bottom: 5px;">Özge Görkem-Özdemir</p>
+                <div style="color: #f1c40f; margin-bottom: 15px; font-size: 1.2rem;">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p style="font-style: italic; color: #444; line-height: 1.6;">
+                    "Wir haben mit unterschiedlichen Reinigungsunternehmen Erfahrungen gemacht, jedoch waren wir mit keiner zufrieden. Seitdem Herr Ülkü die Treppenhausreinigung und den Winterdienst übernommen hat, läuft alles in Takt. Auch die halbjährliche Fensterreinigung, die ich in meiner Wohnung durchführen lasse, ist immer spitze!"
+                </p>
             </div>
         </div>
     </section>
